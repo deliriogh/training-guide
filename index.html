@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales / Service Cloud — Success Engineer Training Guide</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">✦</span>
+      <span>Training Guide</span>
+    </div>
+    <button id="themeToggle" class="icon-button" aria-label="Toggle theme">☾</button>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">CONTENTS</div>
+      <nav id="toc">
+        <a href="#overview">01 · Salesforce Platform</a>
+        <a href="#environments">02 · Environments & Administration</a>
+        <a href="#data-model">03 · Salesforce Data Model</a>
+        <a href="#clouds">04 · Sales & Service Cloud</a>
+        <a href="#investigations">05 · Investigations</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="hero" id="home">
+        <div class="eyebrow">SUCCESS ENGINEER TRAINING PROGRAM</div>
+        <h1>Sales / Service Cloud<br><span>Interactive Training Guide</span></h1>
+        <p>Explore the concepts, terminology and workflows covered during the training.</p>
+        <a class="primary-button" href="#overview">Start learning →</a>
+      </section>
+
+      <section class="section" id="overview">
+        <div class="section-number">01</div>
+        <h2>Salesforce Platform Overview</h2>
+        <p class="lead">The foundation of the Salesforce platform and the concepts used throughout the training.</p>
+
+        <div class="cards">
+          <article class="card">
+            <span class="tag">CORE CONCEPT</span>
+            <h3>Understanding Salesforce</h3>
+            <p>Salesforce provides the infrastructure, applications, and operational services that support a business.</p>
+            <div class="definition">
+              <span>Salesforce</span>
+              <div>Infrastructure, applications and operational services that support business needs.</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="tag">ARCHITECTURE</span>
+            <h3>Customer 360</h3>
+            <p>Customer 360 encompasses Salesforce products and is designed to meet business needs across industries.</p>
+            <div class="definition">
+              <span>Customer 360</span>
+              <div>A Salesforce approach that brings products together to address business needs.</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="tag">ARCHITECTURE</span>
+            <h3>Multi-Tenant Environment</h3>
+            <p>A single instance of software, database and supporting infrastructure serves multiple customers while keeping tenant data isolated.</p>
+            <div class="definition">
+              <span>Multi-tenancy</span>
+              <div>Multiple customers share infrastructure while their data remains isolated.</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="info-box">
+          <strong>Interactive concept</strong>
+          <p>Hover over the highlighted terms to see quick definitions. We can expand this behavior across the entire guide as we add your training material.</p>
+        </div>
+      </section>
+
+      <section class="section" id="environments">
+        <div class="section-number">02</div>
+        <h2>Environments & Administration</h2>
+        <p class="lead">Production, Sandbox and the administration tools used to configure Salesforce.</p>
+
+        <div class="comparison">
+          <div>
+            <span class="tag">LIVE</span>
+            <h3>Production</h3>
+            <p>The main live Salesforce org where real business operations run.</p>
+            <ul>
+              <li>Real customers</li>
+              <li>Real sales deals</li>
+              <li>Live automations</li>
+              <li>Daily business operations</li>
+            </ul>
+          </div>
+          <div class="vs">VS</div>
+          <div>
+            <span class="tag">PRACTICE</span>
+            <h3>Sandbox</h3>
+            <p>A copy of the Production org used for development, testing, training and experimentation.</p>
+            <ul>
+              <li>Development</li>
+              <li>Testing</li>
+              <li>Training</li>
+              <li>Safe experimentation</li>
+            </ul>
+          </div>
+        </div>
+
+        <article class="card wide">
+          <span class="tag">ADMINISTRATION</span>
+          <h3>Setup & Object Manager</h3>
+          <p>Object Manager lets admins access settings for standard and custom objects, including fields, page layouts and compact layouts.</p>
+        </article>
+      </section>
+
+      <section class="section" id="data-model">
+        <div class="section-number">03</div>
+        <h2>Salesforce Data Model</h2>
+        <p class="lead">Objects, fields and configuration concepts that define how a Salesforce org is structured.</p>
+
+        <div class="term-grid">
+          <div class="term">Account <span>ⓘ<b>Represents an individual account such as a customer, competitor or partner.</b></span></div>
+          <div class="term">Contact <span>ⓘ<b>Represents a person associated with an account.</b></span></div>
+          <div class="term">Lead <span>ⓘ<b>Represents a prospect or lead.</b></span></div>
+          <div class="term">Opportunity <span>ⓘ<b>Represents a sale or pending deal.</b></span></div>
+          <div class="term">Custom Object <span>ⓘ<b>A custom object used to model business information beyond the standard objects.</b></span></div>
+          <div class="term">Record Type <span>ⓘ<b>Training material identifies Record Type as a Salesforce configuration concept.</b></span></div>
+        </div>
+      </section>
+
+      <section class="section" id="clouds">
+        <div class="section-number">04</div>
+        <h2>Sales Cloud vs Service Cloud</h2>
+        <p class="lead">Two core areas covered in the training program.</p>
+
+        <div class="cloud-grid">
+          <article class="cloud-card sales">
+            <span class="tag">SALES</span>
+            <h3>Sales Cloud</h3>
+            <p>Drives revenue by managing the sales pipeline and finding new customers.</p>
+          </article>
+          <article class="cloud-card service">
+            <span class="tag">SERVICE</span>
+            <h3>Service Cloud</h3>
+            <p>Drives retention by resolving customer issues and optimizing support.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="investigations">
+        <div class="section-number">05</div>
+        <h2>Structured Investigations</h2>
+        <p class="lead">A section we can expand into an interactive troubleshooting playbook.</p>
+
+        <div class="steps">
+          <div><span>01</span><h3>Investigation Notes</h3><p>Capture the relevant findings and context.</p></div>
+          <div><span>02</span><h3>Reproduction Steps</h3><p>Document how the issue can be reproduced.</p></div>
+          <div><span>03</span><h3>Evidence Collection</h3><p>Collect information that supports the investigation.</p></div>
+          <div><span>04</span><h3>Recommended Next Actions</h3><p>Clearly state the next action based on the investigation.</p></div>
+        </div>
+      </section>
+
+      <footer>
+        <p>Sales / Service Cloud · Success Engineer Training Guide</p>
+        <button id="topButton">Back to top ↑</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
