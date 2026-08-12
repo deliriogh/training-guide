@@ -12,154 +12,576 @@
       <span class="brand-mark">✦</span>
       <span>Training Guide</span>
     </div>
-    <button id="themeToggle" class="icon-button" aria-label="Toggle theme">☾</button>
+    <div class="topbar-actions">
+      <span class="current-topic" id="currentTopic">01 · Support Organization &amp; Case Management</span>
+
+      <div class="top-progress" aria-label="Course progress">
+        <div class="top-progress-copy">
+          <span>Progress</span>
+          <strong id="topProgressPercent">0%</strong>
+        </div>
+        <div class="top-progress-track">
+          <div class="top-progress-fill" id="topProgressFill"></div>
+        </div>
+      </div>
+
+      <button id="themeToggle" class="icon-button" aria-label="Toggle theme">☾</button>
+    </div>
   </header>
 
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="sidebar-title">CONTENTS</div>
-      <nav id="toc">
-        <a href="#overview">01 · Salesforce Platform</a>
-        <a href="#environments">02 · Environments & Administration</a>
-        <a href="#data-model">03 · Salesforce Data Model</a>
-        <a href="#clouds">04 · Sales & Service Cloud</a>
-        <a href="#investigations">05 · Investigations</a>
-      </nav>
+  <div class="app-shell">
+    <aside class="icon-rail" aria-label="Training tools">
+      <div class="rail-accent" aria-hidden="true"></div>
+      <div class="history-controls" aria-label="Navigation history">
+        <button class="history-button" id="historyBack" aria-label="Previous view" title="Previous view">←</button>
+        <button class="history-button" id="historyForward" aria-label="Next view" title="Next view">→</button>
+      </div>
+      <button class="rail-button active" data-panel="progress" aria-label="Course progress" title="Progress">
+        <span class="rail-icon">◔</span>
+      </button>
+      <button class="rail-button" data-panel="contents" aria-label="Course contents" title="Contents">
+        <span class="rail-icon">☷</span>
+      </button>
+      <button class="rail-button" data-panel="glossary" aria-label="Glossary" title="Glossary">
+        <span class="rail-icon">A·Z</span>
+      </button>
+      <button class="rail-button" data-panel="references" aria-label="Reference links" title="References">
+        <span class="rail-icon">↗</span>
+      </button>
+    </aside>
+
+    <aside class="utility-panel" id="utilityPanel">
+      <div class="panel-header">
+        <div>
+          <div class="panel-eyebrow">NAVIGATION</div>
+          <h2>Contents</h2>
+        </div>
+        <button class="panel-close" id="panelClose" aria-label="Close panel">×</button>
+      </div>
+
+      <section class="panel-view active" data-view="contents">
+
+        <div class="nav-search-wrap">
+          <span class="nav-search-icon">⌕</span>
+          <input id="navigationSearch" class="nav-search-input" type="search"
+                 placeholder="Search topics..." autocomplete="off" aria-label="Search navigation topics">
+          <button id="navigationSearchClear" class="nav-search-clear" type="button" aria-label="Clear navigation search">×</button>
+        </div>
+        <div class="nav-search-empty" id="navigationSearchEmpty">No matching topics.</div>
+        <nav class="course-tree" id="courseTree">
+          <div class="tree-group open">
+            <button class="tree-parent active" data-section="support-org">
+              <span>01 · Support Organization, Case Management &amp; Customer Experience</span><span class="chevron">⌄</span>
+            </button>
+            <div class="tree-children">
+              <button data-subtarget="support-role">01.1 · Support Engineer Role</button>
+              <button data-subtarget="case-lifecycle">01.2 · Case Lifecycle</button>
+              <button data-subtarget="severity-sla">01.3 · Severity, SLA &amp; Case Closure</button>
+              <button data-subtarget="case-quality">01.4 · Case Details &amp; Case Quality</button>
+              <button data-subtarget="routing-transfers">01.5 · Case Routing &amp; Transfers</button>
+              <button data-subtarget="queue-work">01.6 · Queue &amp; Work Management</button>
+              <button data-subtarget="customer-experience">01.7 · Customer Experience &amp; Communication</button>
+              <button data-subtarget="support-metrics">01.8 · Support Expectations &amp; Metrics</button>
+            </div>
+          </div>
+
+          <div class="tree-group">
+            <button class="tree-parent" data-section="platform-fundamentals">
+              <span>02 · Salesforce Platform Fundamentals</span><span class="chevron">⌄</span>
+            </button>
+            <div class="tree-children">
+              <button data-subtarget="platform-architecture">02.1 · Salesforce Platform &amp; Architecture</button>
+              <button data-subtarget="internal-tools">02.2 · Internal Support Tools</button>
+              <button data-subtarget="sf-environments">02.3 · Salesforce Environments</button>
+              <button data-subtarget="data-metadata">02.4 · Data &amp; Metadata</button>
+              <button data-subtarget="navigation-config">02.5 · Navigation &amp; Configuration</button>
+            </div>
+          </div>
+
+          <div class="tree-group">
+            <button class="tree-parent" data-section="core-cloud">
+              <span>03 · Core Cloud Fundamentals</span><span class="chevron">⌄</span>
+            </button>
+            <div class="tree-children">
+              <button data-subtarget="sales-cloud">03.1 · Sales Cloud</button>
+              <button data-subtarget="service-cloud">03.2 · Service Cloud</button>
+              <button data-subtarget="sales-vs-service">03.3 · Sales Cloud vs Service Cloud</button>
+            </div>
+          </div>
+
+          <div class="tree-group upcoming">
+            <button class="tree-parent" data-section="security-visibility">
+              <span>04 · Security, Visibility &amp; Escalation Management</span><span class="chevron">⌄</span>
+            </button>
+            <div class="tree-children">
+              <div class="tree-placeholder">Upcoming training content</div>
+            </div>
+          </div>
+
+          <div class="tree-group upcoming">
+            <button class="tree-parent" data-section="automation-knowledge">
+              <span>05 · Automation, Knowledge Management &amp; Known Issues</span><span class="chevron">⌄</span>
+            </button>
+            <div class="tree-children">
+              <div class="tree-placeholder">Upcoming training content</div>
+            </div>
+          </div>
+        </nav>
+      </section>
     </aside>
 
     <main class="content">
-      <section class="hero" id="home">
+      <nav class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb">
+        <span class="breadcrumb-root">Training</span>
+        <span class="breadcrumb-separator">›</span>
+        <span id="breadcrumbParent">Salesforce Platform</span>
+      </nav>
+      <section class="hero">
         <div class="eyebrow">SUCCESS ENGINEER TRAINING PROGRAM</div>
         <h1>Sales / Service Cloud<br><span>Interactive Training Guide</span></h1>
         <p>Explore the concepts, terminology and workflows covered during the training.</p>
-        <a class="primary-button" href="#overview">Start learning →</a>
+        <button class="primary-button" id="startLearning">Start learning →</button>
       </section>
 
-      <section class="section" id="overview">
+      <section class="section training-section active-section" id="overview">
         <div class="section-number">01</div>
         <h2>Salesforce Platform Overview</h2>
         <p class="lead">The foundation of the Salesforce platform and the concepts used throughout the training.</p>
-
-        <div class="cards">
-          <article class="card">
-            <span class="tag">CORE CONCEPT</span>
-            <h3>Understanding Salesforce</h3>
-            <p>Salesforce provides the infrastructure, applications, and operational services that support a business.</p>
-            <div class="definition">
-              <span>Salesforce</span>
-              <div>Infrastructure, applications and operational services that support business needs.</div>
+        <div class="visual-showcase">
+          <div class="showcase-title-row">
+            <div>
+              <span class="tag">INTERACTIVE VISUAL</span>
+              <h3>1. Platform Ecosystem</h3>
+              <p>Hover over each product to learn what it does. Sales and Service can also take you directly to their training sections.</p>
             </div>
-          </article>
+          </div>
 
-          <article class="card">
-            <span class="tag">ARCHITECTURE</span>
-            <h3>Customer 360</h3>
-            <p>Customer 360 encompasses Salesforce products and is designed to meet business needs across industries.</p>
-            <div class="definition">
-              <span>Customer 360</span>
-              <div>A Salesforce approach that brings products together to address business needs.</div>
-            </div>
-          </article>
+          <div class="ecosystem-layout">
+            <aside class="showcase-info">
+              <div class="info-number">01</div>
+              <h4>Explore the ecosystem</h4>
+              <p>Each product is interactive. Move your cursor across the platform to update this card.</p>
 
-          <article class="card">
-            <span class="tag">ARCHITECTURE</span>
-            <h3>Multi-Tenant Environment</h3>
-            <p>A single instance of software, database and supporting infrastructure serves multiple customers while keeping tenant data isolated.</p>
-            <div class="definition">
-              <span>Multi-tenancy</span>
-              <div>Multiple customers share infrastructure while their data remains isolated.</div>
+              <div class="live-info-card" id="ecosystemInfoCard">
+                <div class="live-info-icon" id="ecosystemInfoIcon">⚡</div>
+                <div class="live-info-copy">
+                  <span class="live-info-label">CURRENT PRODUCT</span>
+                  <h5 id="ecosystemInfoTitle">Sales</h5>
+                  <p id="ecosystemInfoText">Manage the sales process, track <span class="card-inline-term" tabindex="0">opportunities<span class="card-term-tooltip"><strong>Opportunity</strong>A Salesforce record used to track a potential sale or deal through the sales process.</span></span> and support customer acquisition.</p>
+                  <button class="live-info-link" id="ecosystemInfoLink" type="button">Go to Sales →</button>
+                </div>
+              </div>
+            </aside>
+
+            <div class="ecosystem-visual">
+
+              <div class="ecosystem-products">
+                <button class="ecosystem-product product-sales active"
+                        data-title="Sales"
+                        data-icon="⚡"
+                        data-description="Manage the sales process, track opportunities and support customer acquisition."
+                        data-description-html="Manage the sales process, track <span class='card-inline-term' tabindex='0'>opportunities<span class='card-term-tooltip'><strong>Opportunity</strong>A Salesforce record used to track a potential sale or deal through the sales process.</span></span> and support customer acquisition."
+                        data-action="Go to Sales →"
+                        data-jump="clouds"
+                        data-subtarget="salescloud">
+                  <span class="product-orbit"></span>
+                  <span class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 13h6l-1 9 9-13h-6z" fill="currentColor"/></svg></span>
+                  <span class="product-name">Sales</span>
+                </button>
+
+                <button class="ecosystem-product product-service"
+                        data-title="Service"
+                        data-icon="▣"
+                        data-description="Support customers, manage cases and optimize service operations."
+                        data-action="Go to Service →"
+                        data-jump="clouds"
+                        data-subtarget="servicecloud">
+                  <span class="product-orbit"></span>
+                  <span class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h10a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 9h8a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v3l-4-3h-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+                  <span class="product-name">Service</span>
+                </button>
+
+                <button class="ecosystem-product product-marketing"
+                        data-title="Marketing"
+                        data-icon="◎"
+                        data-description="Marketing capabilities within the broader Salesforce ecosystem."
+                        data-action="Training reference">
+                  <span class="product-orbit"></span>
+                  <span class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+                  <span class="product-name">Marketing</span>
+                </button>
+
+                <button class="ecosystem-product product-community"
+                        data-title="Community"
+                        data-icon="◉"
+                        data-description="Customer and partner-facing experiences within the platform ecosystem."
+                        data-action="Training reference">
+                  <span class="product-orbit"></span>
+                  <span class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 20c.5-4 2.3-6 5-6s4.5 2 5 6M11 20c.5-4 2.3-6 5-6s4.5 2 5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                  <span class="product-name">Community</span>
+                </button>
+
+                <button class="ecosystem-product product-apps"
+                        data-title="Apps"
+                        data-icon="✦"
+                        data-description="Applications that extend or customize business processes on Salesforce."
+                        data-action="Training reference">
+                  <span class="product-orbit"></span>
+                  <span class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2Z" fill="currentColor"/><path d="M18 14l.9 2.6L21.5 18l-2.6.9L18 21.5l-.9-2.6-2.6-.9 2.6-.9L18 14Z" fill="currentColor"/></svg></span>
+                  <span class="product-name">Apps</span>
+                </button>
+
+                <button class="ecosystem-product product-commerce"
+                        data-title="Commerce"
+                        data-icon="⌑"
+                        data-description="Commerce capabilities within the Salesforce ecosystem."
+                        data-action="Training reference">
+                  <span class="product-orbit"></span>
+                  <span class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2l2.2 9.5h9.8L19 8H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19" r="1.5" fill="currentColor"/><circle cx="17" cy="19" r="1.5" fill="currentColor"/></svg></span>
+                  <span class="product-name">Commerce</span>
+                </button>
+
+                <button class="ecosystem-product product-iot"
+                        data-title="IoT"
+                        data-icon="I●T"
+                        data-description="Connected-device concepts within the broader Salesforce ecosystem."
+                        data-action="Training reference">
+                  <span class="product-orbit"></span>
+                  <span class="product-icon product-icon-small"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6v12M20 6v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 4.5a9 9 0 0 1 5 0M9.5 19.5a9 9 0 0 0 5 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                  <span class="product-name">IoT</span>
+                </button>
+
+                <button class="ecosystem-product product-quip"
+                        data-title="Quip"
+                        data-icon="Q"
+                        data-description="Collaboration and productivity tools associated with Salesforce."
+                        data-action="Training reference">
+                  <span class="product-orbit"></span>
+                  <span class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v12H9l-4 4V4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8h6M9 11h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                  <span class="product-name">Quip</span>
+                </button>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
 
-        <div class="info-box">
-          <strong>Interactive concept</strong>
-          <p>Hover over the highlighted terms to see quick definitions. We can expand this behavior across the entire guide as we add your training material.</p>
+        <div class="visual-showcase navigation-showcase">
+          <div class="showcase-title-row">
+            <div>
+              <span class="tag">INTERACTIVE SCREENSHOT</span>
+              <h3>2. Navigation Overview</h3>
+              <p>Hover over the pulsing markers in the Salesforce interface to understand the purpose of each navigation element.</p>
+            </div>
+          </div>
+
+          <div class="navigation-showcase-layout">
+            <aside class="showcase-info nav-info-panel">
+              <div class="info-number">02</div>
+              <h4>Salesforce Navigation</h4>
+              <p>The screenshot stays visible while this panel changes according to the element under your cursor.</p>
+
+              <div class="live-info-card nav-live-card">
+                <div class="live-info-icon" id="navInfoIcon">⚙</div>
+                <div class="live-info-copy">
+                  <span class="live-info-label">NAVIGATION ELEMENT</span>
+                  <h5 id="navInfoTitle">Setup</h5>
+                  <p id="navInfoText">Access administration and configuration tools for your Salesforce organization.</p>
+                </div>
+              </div>
+            </aside>
+
+            <div class="navigation-visual">
+              <div class="navigation-image-frame">
+                <img src="images/navigation-salesforce.png" alt="Salesforce navigation screenshot used for interactive training">
+
+                <button class="nav-hotspot nav-hotspot-apps"
+                        data-title="App Launcher"
+                        data-icon="⠿"
+                        data-description="Access apps and items available to you in Salesforce."
+                        aria-label="App Launcher hotspot"><span></span></button>
+
+                <button class="nav-hotspot nav-hotspot-tabs"
+                        data-title="Navigation Tabs"
+                        data-icon="▤"
+                        data-description="Navigate between records and lists such as Leads, Tasks, Accounts and other objects."
+                        aria-label="Navigation tabs hotspot"><span></span></button>
+
+                <button class="nav-hotspot nav-hotspot-search"
+                        data-title="Global Search"
+                        data-icon="⌕"
+                        data-description="Quickly find records and information across Salesforce."
+                        aria-label="Global search hotspot"><span></span></button>
+
+                <button class="nav-hotspot nav-hotspot-actions"
+                        data-title="Global Actions"
+                        data-icon="+"
+                        data-description="Create records or access common actions from the global header."
+                        aria-label="Global actions hotspot"><span></span></button>
+
+                <button class="nav-hotspot nav-hotspot-setup active"
+                        data-title="Setup"
+                        data-icon="⚙"
+                        data-description="Access administration and configuration tools for your Salesforce organization."
+                        aria-label="Setup hotspot"><span></span></button>
+
+                <button class="nav-hotspot nav-hotspot-notifications"
+                        data-title="Notifications"
+                        data-icon="♢"
+                        data-description="View alerts and activity-related updates."
+                        aria-label="Notifications hotspot"><span></span></button>
+
+                <button class="nav-hotspot nav-hotspot-user"
+                        data-title="User Menu"
+                        data-icon="◯"
+                        data-description="Access profile, preferences and user-level options."
+                        aria-label="User menu hotspot"><span></span></button>
+              </div>
+
+              <div class="navigation-feature-cards">
+                <button data-hotspot-target="App Launcher"><span>⠿</span><strong>App Launcher</strong><small>Apps & items</small></button>
+                <button data-hotspot-target="Navigation Tabs"><span>▤</span><strong>Tabs</strong><small>Objects & lists</small></button>
+                <button data-hotspot-target="Global Search"><span>⌕</span><strong>Global Search</strong><small>Find records</small></button>
+                <button data-hotspot-target="Global Actions"><span>+</span><strong>Global Actions</strong><small>Quick actions</small></button>
+                <button data-hotspot-target="Setup"><span>⚙</span><strong>Setup</strong><small>Configure Salesforce</small></button>
+                <button data-hotspot-target="Notifications"><span>♢</span><strong>Notifications</strong><small>Alerts & updates</small></button>
+                <button data-hotspot-target="User Menu"><span>◯</span><strong>User Menu</strong><small>Profile & settings</small></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-check" data-quiz="overview">
+          <div class="quiz-kicker">QUICK CHECK</div>
+          <h3>What does a multi-tenant environment mean?</h3>
+          <label><input type="radio" name="overview-quiz" value="a"> Every customer uses completely separate Salesforce infrastructure.</label>
+          <label><input type="radio" name="overview-quiz" value="b"> Multiple customers share infrastructure while their data remains isolated.</label>
+          <label><input type="radio" name="overview-quiz" value="c"> All tenants can access the same records.</label>
+          <button class="quiz-button" data-answer="b">Check answer</button>
+          <p class="quiz-feedback" aria-live="polite"></p>
+        </div>
+        
+        <div class="section-nav">
+          <span></span>
+          <button class="section-nav-btn next" data-go="environments">Next →</button>
+        </div>
+        <div class="completion-row">
+          <button class="complete-button" data-complete="overview">Mark section as completed ✓</button>
         </div>
       </section>
 
-      <section class="section" id="environments">
+      <section class="section training-section" id="environments">
         <div class="section-number">02</div>
         <h2>Environments & Administration</h2>
         <p class="lead">Production, Sandbox and the administration tools used to configure Salesforce.</p>
 
         <div class="comparison">
-          <div>
+          <div id="production">
             <span class="tag">LIVE</span>
             <h3>Production</h3>
             <p>The main live Salesforce org where real business operations run.</p>
-            <ul>
-              <li>Real customers</li>
-              <li>Real sales deals</li>
-              <li>Live automations</li>
-              <li>Daily business operations</li>
-            </ul>
           </div>
           <div class="vs">VS</div>
-          <div>
+          <div id="sandbox">
             <span class="tag">PRACTICE</span>
             <h3>Sandbox</h3>
             <p>A copy of the Production org used for development, testing, training and experimentation.</p>
-            <ul>
-              <li>Development</li>
-              <li>Testing</li>
-              <li>Training</li>
-              <li>Safe experimentation</li>
-            </ul>
           </div>
         </div>
 
-        <article class="card wide">
-          <span class="tag">ADMINISTRATION</span>
-          <h3>Setup & Object Manager</h3>
-          <p>Object Manager lets admins access settings for standard and custom objects, including fields, page layouts and compact layouts.</p>
-        </article>
+        
+        <div class="section-nav">
+          <button class="section-nav-btn prev" data-go="overview">← Previous</button>
+          <button class="section-nav-btn next" data-go="data-model">Next →</button>
+        </div>
+        <div class="completion-row">
+          <button class="complete-button" data-complete="environments">Mark section as completed ✓</button>
+        </div>
       </section>
 
-      <section class="section" id="data-model">
+      <section class="section training-section" id="data-model">
         <div class="section-number">03</div>
         <h2>Salesforce Data Model</h2>
         <p class="lead">Objects, fields and configuration concepts that define how a Salesforce org is structured.</p>
 
-        <div class="term-grid">
+        <div class="term-grid" id="objects">
           <div class="term">Account <span>ⓘ<b>Represents an individual account such as a customer, competitor or partner.</b></span></div>
           <div class="term">Contact <span>ⓘ<b>Represents a person associated with an account.</b></span></div>
           <div class="term">Lead <span>ⓘ<b>Represents a prospect or lead.</b></span></div>
           <div class="term">Opportunity <span>ⓘ<b>Represents a sale or pending deal.</b></span></div>
-          <div class="term">Custom Object <span>ⓘ<b>A custom object used to model business information beyond the standard objects.</b></span></div>
-          <div class="term">Record Type <span>ⓘ<b>Training material identifies Record Type as a Salesforce configuration concept.</b></span></div>
+        </div>
+        <div class="mini-card" id="fields">
+          <strong>Fields & configuration</strong>
+          <p>Placeholder for custom fields, record types, picklists and related concepts.</p>
+        </div>
+
+        
+        <div class="section-nav">
+          <button class="section-nav-btn prev" data-go="environments">← Previous</button>
+          <button class="section-nav-btn next" data-go="clouds">Next →</button>
+        </div>
+        <div class="completion-row">
+          <button class="complete-button" data-complete="data-model">Mark section as completed ✓</button>
         </div>
       </section>
 
-      <section class="section" id="clouds">
+      <section class="section training-section" id="clouds">
         <div class="section-number">04</div>
         <h2>Sales Cloud vs Service Cloud</h2>
         <p class="lead">Two core areas covered in the training program.</p>
-
         <div class="cloud-grid">
-          <article class="cloud-card sales">
-            <span class="tag">SALES</span>
-            <h3>Sales Cloud</h3>
-            <p>Drives revenue by managing the sales pipeline and finding new customers.</p>
+          <article class="cloud-card sales" id="salescloud"><span class="tag">SALES</span><h3>Sales Cloud</h3><p>Drives revenue by managing the sales pipeline and finding new customers.</p></article>
+          <article class="cloud-card service" id="servicecloud"><span class="tag">SERVICE</span><h3>Service Cloud</h3><p>Drives retention by resolving customer issues and optimizing support.</p></article>
+        </div>
+
+        
+        <div class="section-nav">
+          <button class="section-nav-btn prev" data-go="data-model">← Previous</button>
+          <button class="section-nav-btn next" data-go="investigations">Next →</button>
+        </div>
+        <div class="completion-row">
+          <button class="complete-button" data-complete="clouds">Mark section as completed ✓</button>
+        </div>
+      </section>
+
+      <section class="section training-section" id="investigations">
+        <div class="section-number">05</div>
+        <h2>Structured Investigations</h2>
+        <p class="lead">A section we can expand into an interactive troubleshooting playbook.</p>
+        <div class="steps">
+          <div id="notes"><span>01</span><h3>Investigation Notes</h3><p>Capture the relevant findings and context.</p></div>
+          <div><span>02</span><h3>Reproduction Steps</h3><p>Document how the issue can be reproduced.</p></div>
+          <div id="evidence"><span>03</span><h3>Evidence Collection</h3><p>Collect information that supports the investigation.</p></div>
+          <div><span>04</span><h3>Recommended Next Actions</h3><p>Clearly state the next action based on the investigation.</p></div>
+        </div>
+      
+        <div class="section-nav">
+          <button class="section-nav-btn prev" data-go="clouds">← Previous</button>
+        </div>
+</section>
+
+
+
+      <section class="full-page-view" id="progress-page">
+        <div class="section-number">COURSE</div>
+        <h2>Course Progress</h2>
+        <p class="lead">Track progress across the Week 1 structure. Completion is stored locally in this browser.</p>
+
+        <div class="progress-hero">
+          <div class="progress-ring large" id="mainProgressRing"><span id="mainProgressPercent">0%</span></div>
+          <div>
+            <div class="big-stat" id="mainProgressStat">0 of 16</div>
+            <p>Topics completed from the currently established Week 1 structure.</p>
+          </div>
+        </div>
+
+        <div class="course-progress-modules">
+          <article class="course-module-card" data-module="01">
+            <div class="module-number">01</div>
+            <div class="module-copy">
+              <h3>Support Organization, Case Management &amp; Customer Experience</h3>
+              <p>8 topics · Day 1 foundation</p>
+              <div class="module-topic-chips">
+                <span data-topic-chip="support-role">01.1 Role</span>
+                <span data-topic-chip="case-lifecycle">01.2 Lifecycle</span>
+                <span>01.3 SLA</span><span>01.4 Case Quality</span><span>01.5 Transfers</span><span>01.6 Queue</span><span>01.7 CX</span><span>01.8 Metrics</span>
+              </div>
+            </div>
           </article>
-          <article class="cloud-card service">
-            <span class="tag">SERVICE</span>
-            <h3>Service Cloud</h3>
-            <p>Drives retention by resolving customer issues and optimizing support.</p>
+
+          <article class="course-module-card" data-module="02">
+            <div class="module-number">02</div>
+            <div class="module-copy">
+              <h3>Salesforce Platform Fundamentals</h3>
+              <p>5 topics · Day 2 foundation</p>
+              <div class="module-topic-chips">
+                <span>02.1 Architecture</span><span>02.2 Internal Tools</span><span>02.3 Environments</span><span>02.4 Data &amp; Metadata</span><span>02.5 Navigation &amp; Configuration</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-module-card" data-module="03">
+            <div class="module-number">03</div>
+            <div class="module-copy">
+              <h3>Core Cloud Fundamentals</h3>
+              <p>3 topics · Structure established, content in progress</p>
+              <div class="module-topic-chips">
+                <span>03.1 Sales Cloud</span><span>03.2 Service Cloud</span><span>03.3 Sales vs Service</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-module-card upcoming-module">
+            <div class="module-number">04</div>
+            <div class="module-copy"><h3>Security, Visibility &amp; Escalation Management</h3><p>Upcoming</p></div>
+          </article>
+
+          <article class="course-module-card upcoming-module">
+            <div class="module-number">05</div>
+            <div class="module-copy"><h3>Automation, Knowledge Management &amp; Known Issues</h3><p>Upcoming</p></div>
           </article>
         </div>
       </section>
 
-      <section class="section" id="investigations">
-        <div class="section-number">05</div>
-        <h2>Structured Investigations</h2>
-        <p class="lead">A section we can expand into an interactive troubleshooting playbook.</p>
+      <section class="full-page-view" id="glossary-page">
+        <div class="section-number">REFERENCE</div>
+        <h2>Glossary</h2>
+        <p class="lead">Search common terms and abbreviations used throughout the training.</p>
 
-        <div class="steps">
-          <div><span>01</span><h3>Investigation Notes</h3><p>Capture the relevant findings and context.</p></div>
-          <div><span>02</span><h3>Reproduction Steps</h3><p>Document how the issue can be reproduced.</p></div>
-          <div><span>03</span><h3>Evidence Collection</h3><p>Collect information that supports the investigation.</p></div>
-          <div><span>04</span><h3>Recommended Next Actions</h3><p>Clearly state the next action based on the investigation.</p></div>
+        <div class="glossary-page-toolbar">
+          <label class="search-label" for="glossaryPageSearch">Search glossary</label>
+          <input id="glossaryPageSearch" class="search-input page-search" type="search" placeholder="Search SOQL, POD, UAT...">
+        </div>
+
+        <div class="glossary-page-list" id="glossaryPageList">
+          <article class="glossary-page-item" data-term="blacktab">
+            <div class="letter-badge">B</div>
+            <div><h3>BlackTab</h3><p>Administrative console used to support customers and troubleshoot org issues.</p></div>
+          </article>
+          <article class="glossary-page-item" data-term="pod">
+            <div class="letter-badge">P</div>
+            <div><h3>POD</h3><p>Point of Delivery: a logical grouping of Salesforce infrastructure serving customer orgs.</p></div>
+          </article>
+          <article class="glossary-page-item" data-term="soql">
+            <div class="letter-badge">S</div>
+            <div><h3>SOQL</h3><p>Salesforce Object Query Language, used to query Salesforce data.</p></div>
+          </article>
+          <article class="glossary-page-item" data-term="uat">
+            <div class="letter-badge">U</div>
+            <div><h3>UAT</h3><p>User Acceptance Testing.</p></div>
+          </article>
+        </div>
+        <p class="empty-state" id="glossaryPageEmpty">No glossary terms found.</p>
+      </section>
+
+      <section class="full-page-view" id="references-page">
+        <div class="section-number">RESOURCES</div>
+        <h2>Reference Links</h2>
+        <p class="lead">Useful resources related to the training. These are placeholders for now.</p>
+
+        <div class="reference-page-grid">
+          <article class="reference-page-card">
+            <div class="reference-icon">↗</div>
+            <div>
+              <h3>Trailhead</h3>
+              <p>Learning resource placeholder.</p>
+            </div>
+          </article>
+
+          <article class="reference-page-card">
+            <div class="reference-icon">⌘</div>
+            <div>
+              <h3>Internal Training Deck</h3>
+              <p>Current source material placeholder.</p>
+            </div>
+          </article>
+
+          <article class="reference-page-card">
+            <div class="reference-icon">?</div>
+            <div>
+              <h3>Salesforce Help</h3>
+              <p>Documentation reference placeholder.</p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -167,6 +589,241 @@
         <p>Sales / Service Cloud · Success Engineer Training Guide</p>
         <button id="topButton">Back to top ↑</button>
       </footer>
+    
+
+      <section class="section training-section" id="support-org">
+        <div class="section-number">01 · WEEK 1</div>
+        <h2>Support Organization, Case Management &amp; Customer Experience</h2>
+        <p class="lead">How a Success Engineer fits into the support organization and how a customer case moves from creation to resolution.</p>
+
+        <article class="topic-section real-content-topic" id="support-role">
+          <div class="topic-heading">
+            <div>
+              <span class="topic-index">01.1</span>
+              <h3>Support Engineer Role</h3>
+              <p>The training begins with the support organization, the engineer career path, and the role of support as a first layer for customer issues.</p>
+            </div>
+            <span class="topic-status">DAY 1</span>
+          </div>
+
+          <div class="role-intro-grid">
+            <div class="role-main-card">
+              <span class="mini-eyebrow">ROLE FOCUS</span>
+              <h4>Technical Support Engineer</h4>
+              <p>
+                The role sits at the intersection of <span class="inline-term" tabindex="0">technical investigation<span class="tooltip">Reviewing the issue, evidence, environment and relevant technical context to understand what is happening.</span></span>,
+                customer communication, and product knowledge. The training frames support as more than closing cases: the goal is to help customers succeed while building strong technical expertise.
+              </p>
+            </div>
+
+            <div class="role-principles">
+              <div class="principle-card">
+                <span>01</span>
+                <strong>Customer success</strong>
+                <p>Support work is tied to customer outcomes and service excellence.</p>
+              </div>
+              <div class="principle-card">
+                <span>02</span>
+                <strong>Product expertise</strong>
+                <p>Engineers are expected to keep developing product knowledge and technical proficiency.</p>
+              </div>
+              <div class="principle-card">
+                <span>03</span>
+                <strong>Continuous growth</strong>
+                <p>The program introduces clear career paths and continued learning as part of the role.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="career-path-card">
+            <div class="career-copy">
+              <span class="mini-eyebrow">CAREER CONNECT</span>
+              <h4>A role with multiple growth paths</h4>
+              <p>The Day 1 material presents Technical Support Engineer as a starting point that can grow into senior and principal technical support paths, as well as technical account-oriented paths.</p>
+            </div>
+            <div class="career-flow" aria-label="Example support engineer career path">
+              <div class="career-node active"><span>01</span><strong>Technical Support</strong></div>
+              <span class="career-arrow">→</span>
+              <div class="career-node"><span>02</span><strong>Senior Technical</strong></div>
+              <span class="career-arrow">→</span>
+              <div class="career-node"><span>03</span><strong>Principal</strong></div>
+              <span class="career-arrow">→</span>
+              <div class="career-node alternate"><span>↗</span><strong>Technical Account</strong></div>
+            </div>
+          </div>
+
+          <div class="topic-completion">
+            <button class="complete-button topic-complete-button" data-complete="support-role">Mark topic as completed ✓</button>
+          </div>
+        </article>
+
+        <article class="topic-section real-content-topic" id="case-lifecycle">
+          <div class="topic-heading">
+            <div>
+              <span class="topic-index">01.2</span>
+              <h3>Case Lifecycle</h3>
+              <p>A support case follows a defined journey from the moment it is created until the issue is documented and the case is closed.</p>
+            </div>
+            <span class="topic-status">9 STEPS</span>
+          </div>
+
+          <div class="lifecycle-explorer">
+            <div class="lifecycle-detail" id="lifecycleDetail">
+              <span class="mini-eyebrow">CURRENT STEP</span>
+              <div class="lifecycle-detail-head">
+                <div class="lifecycle-detail-number" id="lifecycleNumber">1</div>
+                <div>
+                  <h4 id="lifecycleTitle">Case Created</h4>
+                  <p id="lifecycleDescription">The customer opens a support case and it enters the support workflow.</p>
+                </div>
+              </div>
+              <div class="lifecycle-practical">
+                <strong>In practice</strong>
+                <p id="lifecyclePractice">This is the starting point for the investigation and the case record becomes the central place for the work that follows.</p>
+              </div>
+            </div>
+
+            <div class="lifecycle-track" id="lifecycleTrack">
+              <button class="lifecycle-step active" data-step="1"
+                data-title="Case Created"
+                data-description="The customer opens a support case and it enters the support workflow."
+                data-practice="This is the starting point for the investigation and the case record becomes the central place for the work that follows.">
+                <span class="lifecycle-icon">✉</span><span class="lifecycle-step-number">01</span><strong>Created</strong>
+              </button>
+
+              <button class="lifecycle-step" data-step="2"
+                data-title="Case Assigned"
+                data-description="The case is assigned to the appropriate team and engineer according to routing rules and case context."
+                data-practice="Assignment can depend on routing logic and the severity of the case.">
+                <span class="lifecycle-icon">◎</span><span class="lifecycle-step-number">02</span><strong>Assigned</strong>
+              </button>
+
+              <button class="lifecycle-step" data-step="3"
+                data-title="Initial Investigation"
+                data-description="The engineer reviews the case, gathers context, validates details and begins narrowing the problem."
+                data-practice="Review screenshots, logs and the reported behavior. Ask the right questions and avoid assumptions.">
+                <span class="lifecycle-icon">⌕</span><span class="lifecycle-step-number">03</span><strong>Investigate</strong>
+              </button>
+
+              <button class="lifecycle-step" data-step="4"
+                data-title="Customer Communication"
+                data-description="The engineer contacts the customer for clarification, updates or additional information."
+                data-practice="Clear communication can materially improve the case. Do not assume what the customer means—confirm it.">
+                <span class="lifecycle-icon">◌</span><span class="lifecycle-step-number">04</span><strong>Communicate</strong>
+              </button>
+
+              <button class="lifecycle-step" data-step="5"
+                data-title="Troubleshooting & Resolution"
+                data-description="The engineer investigates, reproduces and troubleshoots the issue while working toward a solution."
+                data-practice="When appropriate, reproduce the behavior in a demo org, search for known issues, and obtain the technical access needed for investigation.">
+                <span class="lifecycle-icon">⚒</span><span class="lifecycle-step-number">05</span><strong>Troubleshoot</strong>
+              </button>
+
+              <button class="lifecycle-step" data-step="6"
+                data-title="Transfer / Escalation"
+                data-description="If the issue belongs outside the current team's scope, the case is transferred or escalated to the appropriate team."
+                data-practice="Transfer with context. The receiving team should understand what is happening and what has already been investigated.">
+                <span class="lifecycle-icon">⇄</span><span class="lifecycle-step-number">06</span><strong>Transfer</strong>
+              </button>
+
+              <button class="lifecycle-step" data-step="7"
+                data-title="Solution Provided"
+                data-description="The engineer provides the solution and confirms that the customer understands the recommendation."
+                data-practice="Explain the solution clearly: what to do, how it works, and why it resolves the issue.">
+                <span class="lifecycle-icon">✓</span><span class="lifecycle-step-number">07</span><strong>Solution</strong>
+              </button>
+
+              <button class="lifecycle-step" data-step="8"
+                data-title="Customer Confirmation"
+                data-description="The customer confirms whether the proposed solution resolved the issue."
+                data-practice="Follow up with the customer and document the confirmation or relevant update in the case.">
+                <span class="lifecycle-icon">◉</span><span class="lifecycle-step-number">08</span><strong>Confirm</strong>
+              </button>
+
+              <button class="lifecycle-step" data-step="9"
+                data-title="Case Closed"
+                data-description="The case is closed once the resolution and relevant details have been documented."
+                data-practice="Capture what the issue was, what was found, and how it was resolved so the case remains useful for future reference.">
+                <span class="lifecycle-icon">▣</span><span class="lifecycle-step-number">09</span><strong>Closed</strong>
+              </button>
+            </div>
+          </div>
+
+          <div class="case-lifecycle-reminder">
+            <span>✦</span>
+            <div>
+              <strong>Core principle</strong>
+              <p>Clear communication, thorough investigation and proper routing help move the case toward resolution without forcing another engineer to restart from zero.</p>
+            </div>
+          </div>
+
+          <div class="quick-check lifecycle-quiz" data-quiz="case-lifecycle">
+            <div class="quiz-kicker">QUICK CHECK</div>
+            <h3>What should happen during the initial investigation?</h3>
+            <label><input type="radio" name="lifecycle-quiz" value="a"> Immediately transfer the case before reviewing it.</label>
+            <label><input type="radio" name="lifecycle-quiz" value="b"> Review the issue and evidence, gather context, and ask clarifying questions.</label>
+            <label><input type="radio" name="lifecycle-quiz" value="c"> Make configuration changes directly in the customer's org.</label>
+            <button class="quiz-button generic-quiz-button" data-answer="b"
+                    data-success="✓ Correct. Initial investigation is about understanding and validating the issue before deciding the next action.">Check answer</button>
+            <p class="quiz-feedback" aria-live="polite"></p>
+          </div>
+
+          <div class="topic-completion">
+            <button class="complete-button topic-complete-button" data-complete="case-lifecycle">Mark topic as completed ✓</button>
+          </div>
+
+          <div class="section-nav">
+            <button class="section-nav-btn prev" data-go="support-org" data-subtarget="support-role">← Previous: Support Engineer Role</button>
+            <button class="section-nav-btn next" data-go="support-org" data-subtarget="severity-sla">Next: Severity, SLA &amp; Closure →</button>
+          </div>
+        </article>
+
+        <div class="future-topic-list">
+          <div id="severity-sla"><span>01.3</span><strong>Severity, SLA &amp; Case Closure</strong><small>Next content block</small></div>
+          <div id="case-quality"><span>01.4</span><strong>Case Details &amp; Case Quality</strong><small>Planned</small></div>
+          <div id="routing-transfers"><span>01.5</span><strong>Case Routing &amp; Transfers</strong><small>Planned</small></div>
+          <div id="queue-work"><span>01.6</span><strong>Queue &amp; Work Management</strong><small>Planned</small></div>
+          <div id="customer-experience"><span>01.7</span><strong>Customer Experience &amp; Communication</strong><small>Planned</small></div>
+          <div id="support-metrics"><span>01.8</span><strong>Support Expectations &amp; Metrics</strong><small>Planned</small></div>
+        </div>
+      </section>
+
+      <section class="section training-section" id="platform-fundamentals">
+        <div class="section-number">02</div>
+        <h2>Salesforce Platform Fundamentals</h2>
+        <p class="section-intro">Approved Day 2 structure. Existing visual prototypes remain in the file while we migrate their content into these real topics.</p>
+        <div class="architecture-grid">
+          <article id="platform-architecture"><span>02.1</span><h3>Salesforce Platform &amp; Architecture</h3></article>
+          <article id="internal-tools"><span>02.2</span><h3>Internal Support Tools</h3></article>
+          <article id="sf-environments"><span>02.3</span><h3>Salesforce Environments</h3></article>
+          <article id="data-metadata"><span>02.4</span><h3>Data &amp; Metadata</h3></article>
+          <article id="navigation-config"><span>02.5</span><h3>Navigation &amp; Configuration</h3></article>
+        </div>
+      </section>
+
+      <section class="section training-section" id="core-cloud">
+        <div class="section-number">03</div>
+        <h2>Core Cloud Fundamentals</h2>
+        <p class="section-intro">Initial structure only; we’ll expand it as the next training material arrives.</p>
+        <div class="architecture-grid">
+          <article id="sales-cloud"><span>03.1</span><h3>Sales Cloud</h3></article>
+          <article id="service-cloud"><span>03.2</span><h3>Service Cloud</h3></article>
+          <article id="sales-vs-service"><span>03.3</span><h3>Sales Cloud vs Service Cloud</h3></article>
+        </div>
+      </section>
+
+      <section class="section training-section" id="security-visibility">
+        <div class="section-number">04</div>
+        <h2>Security, Visibility &amp; Escalation Management</h2>
+        <div class="coming-soon">Upcoming · content will be structured when this part of the training is covered.</div>
+      </section>
+
+      <section class="section training-section" id="automation-knowledge">
+        <div class="section-number">05</div>
+        <h2>Automation, Knowledge Management &amp; Known Issues</h2>
+        <div class="coming-soon">Upcoming · content will be structured when this part of the training is covered.</div>
+      </section>
+
     </main>
   </div>
 
