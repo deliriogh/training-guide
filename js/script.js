@@ -47,6 +47,7 @@ const subtopicLabels = {
   "opportunity-management": "Opportunity Management",
   "approval-processes": "Approval Processes",
   "experience-cloud": "Experience Cloud",
+  "module-03-final": "Module 03 Final Quiz",
   "service-overview": "Service Cloud Ecosystem",
   "service-console": "Service Console",
   "case-management-feed": "Case Management & Case Feed",
@@ -57,6 +58,7 @@ const subtopicLabels = {
   "digital-engagement": "Digital Engagement",
   "email-telephony": "Email & Telephony",
   "service-productivity": "Service Productivity",
+  "module-04-final": "Module 04 Final Quiz",
   "security-model": "Security Model — Who Sees What?",
   "profiles": "Profiles",
   "permission-sets": "Permission Sets",
@@ -75,6 +77,7 @@ const subtopicLabels = {
   "login-hours-ip": "Login Hours & IP Ranges",
   "elevated-permissions": "Admin / Elevated Permissions",
   "security-troubleshooting": "Security Troubleshooting",
+  "module-05-final": "Module 05 Final Quiz",
   "order-of-execution": "Order of Execution",
   "salesforce-flow": "Salesforce Flow",
   "flow-types": "Flow Types",
@@ -350,6 +353,15 @@ treeChildren.forEach(child => {
   });
 });
 
+function updateGlossaryLetterVisibility() {
+  document.querySelectorAll('[data-glossary-letter-heading]').forEach(heading => {
+    const letter = heading.dataset.glossaryLetterHeading;
+    const hasVisible = [...document.querySelectorAll(`.glossary-page-item[data-letter="${letter}"]`)]
+      .some(item => item.style.display !== 'none');
+    heading.style.display = hasVisible ? 'flex' : 'none';
+  });
+}
+
 glossaryPageSearch.addEventListener("input", () => {
   const query = glossaryPageSearch.value.trim().toLowerCase();
   let visible = 0;
@@ -361,6 +373,7 @@ glossaryPageSearch.addEventListener("input", () => {
   });
 
   glossaryPageEmpty.style.display = visible ? "none" : "block";
+  updateGlossaryLetterVisibility();
 });
 
 
@@ -375,7 +388,7 @@ topButton.addEventListener("click", () => {
 });
 
 
-const sectionIds = ["support-role", "case-lifecycle", "severity-sla", "case-quality", "case-closure", "routing-transfers", "queue-work", "customer-experience", "support-metrics", "salesforce-c360", "platform-architecture", "sf-environments", "editions-licenses", "data-model-foundations", "navigation", "configuration", "sales-overview", "accounts-contacts", "lead-lifecycle", "web-to-lead", "lead-assignment", "lead-conversion", "lead-troubleshooting", "opportunity-management", "approval-processes", "experience-cloud", "service-overview", "service-console", "case-management-feed", "parent-child-cases", "case-creation-automation", "omni-queues", "escalation-rules", "digital-engagement", "email-telephony", "service-productivity", "security-model", "profiles", "permission-sets", "object-permissions", "field-level-security", "page-layout-vs-fls", "record-ownership", "owd", "role-hierarchy", "sharing-rules", "public-groups", "teams", "manual-sharing", "manager-groups", "restriction-rules", "login-hours-ip", "elevated-permissions", "security-troubleshooting", "order-of-execution", "salesforce-flow", "flow-types", "flow-builder", "flow-logic", "subflows-versions", "flow-debugging", "validation-rules", "apex-for-se", "reports", "report-types", "report-filters", "report-formats", "dashboards", "report-dashboard-security", "subscriptions", "report-troubleshooting", "data-import-wizard", "data-loader", "data-loader-io", "data-operations", "se-toolbox", "case-history", "setup", "salesforce-help", "demo-sandboxes", "developer-console", "debug-logs", "soql", "workbench", "salesforce-inspector", "splunk", "blacktab", "gus", "trust", "email-logs", "setup-audit-trail", "organization-history", "ai-tools", "problem-boundary", "understand-symptom", "business-impact", "reproduce", "research-before-troubleshooting", "evidence-hypothesis", "pattern-recognition", "root-cause-analysis", "escalation-readiness", "swarming", "release-readiness", "final-checklist"];
+const sectionIds = ["support-role", "case-lifecycle", "severity-sla", "case-quality", "case-closure", "routing-transfers", "queue-work", "customer-experience", "support-metrics", "salesforce-c360", "platform-architecture", "sf-environments", "editions-licenses", "data-model-foundations", "navigation", "configuration", "sales-overview", "accounts-contacts", "lead-lifecycle", "web-to-lead", "lead-assignment", "lead-conversion", "lead-troubleshooting", "opportunity-management", "approval-processes", "experience-cloud", "service-overview", "service-console", "case-management-feed", "parent-child-cases", "case-creation-automation", "omni-queues", "escalation-rules", "digital-engagement", "email-telephony", "service-productivity", "module-04-final", "security-model", "profiles", "permission-sets", "object-permissions", "field-level-security", "page-layout-vs-fls", "record-ownership", "owd", "role-hierarchy", "sharing-rules", "public-groups", "teams", "manual-sharing", "manager-groups", "restriction-rules", "login-hours-ip", "elevated-permissions", "security-troubleshooting", "module-05-final", "order-of-execution", "salesforce-flow", "flow-types", "flow-builder", "flow-logic", "subflows-versions", "flow-debugging", "validation-rules", "apex-for-se", "reports", "report-types", "report-filters", "report-formats", "dashboards", "report-dashboard-security", "subscriptions", "report-troubleshooting", "data-import-wizard", "data-loader", "data-loader-io", "data-operations", "se-toolbox", "case-history", "setup", "salesforce-help", "demo-sandboxes", "developer-console", "debug-logs", "soql", "workbench", "salesforce-inspector", "splunk", "blacktab", "gus", "trust", "email-logs", "setup-audit-trail", "organization-history", "ai-tools", "problem-boundary", "understand-symptom", "business-impact", "reproduce", "research-before-troubleshooting", "evidence-hypothesis", "pattern-recognition", "root-cause-analysis", "escalation-readiness", "swarming", "release-readiness", "final-checklist"];
 const completeButtons = document.querySelectorAll(".complete-button");
 const progressCards = document.querySelectorAll("[data-progress-section]");
 const mainProgressRing = document.getElementById("mainProgressRing");
@@ -853,7 +866,7 @@ function buildModuleExperience() {
             <h3>${name}</h3>
             <p>This topic is part of the approved course structure. Its full Learn → Understand → Investigate → Apply → Check content will be added from the original training sources.</p>
           </div>
-          <span class="topic-status">CONTENT NEXT</span>
+          <span class="topic-status">CONTENT IN PROGRESS</span>
         </div>
         <div class="topic-placeholder-card">
           <span class="mini-eyebrow">TOPIC READY</span>
@@ -884,11 +897,29 @@ function buildModuleExperience() {
           const name = parts.join(" · ") || subtopicLabels[subtarget] || raw;
           const target = document.getElementById(subtarget);
           const built = Boolean(target?.classList.contains("real-content-topic"));
-          return `<button type="button" class="module-topic-jump${built ? " built" : ""}" data-section="${sectionId}" data-subtarget="${subtarget}"><span>${index}</span><strong>${name}</strong><small>${built ? "OPEN TOPIC" : "CONTENT NEXT"}</small><i>→</i></button>`;
+          return `<button type="button" class="module-topic-jump${built ? " built" : ""}" data-section="${sectionId}" data-subtarget="${subtarget}"><span>${index}</span><strong>${name}</strong><small>${built ? "OPEN TOPIC" : "CONTENT IN PROGRESS"}</small><i>→</i></button>`;
         }).join("") : '<div class="module-topic-menu-empty">The Real Case Library will be built after the core training content.</div>'}
       </div>
     `;
-    hero.after(dropdown);
+    const toolbar = document.createElement("div");
+    toolbar.className = "module-tools-row";
+    toolbar.dataset.section = sectionId;
+
+    const moduleSearch = document.createElement("div");
+    moduleSearch.className = "course-search-shell module-course-search";
+    moduleSearch.dataset.courseSearch = "module";
+    moduleSearch.dataset.section = sectionId;
+    moduleSearch.innerHTML = `
+      <div class="course-search-control">
+        <span class="course-search-icon">⌕</span>
+        <input aria-label="Search this module" autocomplete="off" placeholder="Search this module..." type="search"/>
+        <button aria-label="Clear module search" class="course-search-clear" type="button">×</button>
+        <div class="course-search-results" role="listbox"></div>
+      </div>
+    `;
+
+    toolbar.append(dropdown, moduleSearch);
+    hero.after(toolbar);
   });
 
   document.querySelectorAll(".module-topic-jump").forEach(button => {
@@ -960,6 +991,329 @@ brandHome?.addEventListener("keydown", event => {
 
 buildModuleExperience();
 bindHomeNavigation();
+
+// V66 — searchable learning guide. Global search lives on Home; module search is scoped
+// to the module currently being studied. Results can jump directly to a topic and briefly
+// emphasize the matching terms in the learning content.
+(function initCourseContentSearch(){
+  const SEARCH_SYNONYMS = {
+    "sla": ["service level agreement", "service commitment", "milestone"],
+    "slo": ["service level objective"],
+    "ooo": ["out of office"],
+    "fls": ["field level security", "field-level security"],
+    "owd": ["organization wide defaults", "organization-wide defaults"],
+    "csat": ["customer satisfaction"],
+    "ttr": ["time to resolution", "time to resolve"],
+    "omni": ["omni-channel", "omni channel", "routing"],
+    "omni-channel": ["omni channel", "routing"],
+    "route": ["routing", "routed", "assignment"],
+    "routing": ["route", "routed", "assignment"],
+    "queue": ["queues", "routing"],
+    "queues": ["queue", "routing"],
+    "permission": ["permissions", "access", "visibility"],
+    "permissions": ["permission", "access", "visibility"],
+    "field": ["fields"],
+    "fields": ["field"],
+    "object": ["objects"],
+    "objects": ["object"],
+    "lead": ["leads", "web-to-lead"],
+    "case": ["cases", "support case"],
+    "swarm": ["swarming"],
+    "swarming": ["swarm", "collaboration"],
+    "api": ["application programming interface"],
+    "b2b": ["business to business", "business-to-business"],
+    "b2c": ["business to consumer", "business-to-consumer"]
+  };
+
+  const normalize = value => String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const escapeHtml = value => String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+  const escapeRegExp = value => String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  function cleanSearchText(element) {
+    if (!element) return "";
+    const clone = element.cloneNode(true);
+    clone.querySelectorAll([
+      '.tooltip', '.card-term-tooltip', '.topic-learning-nav', '.section-nav',
+      '.quiz-button', 'input', 'textarea', 'select', '.course-search-shell',
+      '.module-topic-dropdown', '.module-tools-row'
+    ].join(',')).forEach(node => node.remove());
+    return String(clone.textContent || "").replace(/\s+/g, " ").trim();
+  }
+
+  function buildIndex() {
+    const records = [];
+    document.querySelectorAll('.training-section').forEach(section => {
+      const sectionId = section.id;
+      const moduleLabel = topicLabels[sectionId] || sectionId;
+      section.querySelectorAll(':scope > .topic-section').forEach(topic => {
+        const id = topic.id;
+        if (!id) return;
+        const title = topic.querySelector('.topic-hero-panel h3, :scope > h3, h3')?.textContent.trim() || subtopicLabels[id] || id;
+        const text = cleanSearchText(topic);
+        records.push({
+          type: 'topic', id, sectionId, title, moduleLabel, text,
+          normTitle: normalize(title), normText: normalize(text)
+        });
+      });
+    });
+
+    document.querySelectorAll('.glossary-page-item[id]').forEach(item => {
+      const title = item.querySelector('h3')?.textContent.trim() || 'Glossary';
+      const text = cleanSearchText(item);
+      records.push({
+        type: 'glossary', id: item.id, sectionId: 'glossary', title,
+        moduleLabel: 'Glossary', text, normTitle: normalize(title), normText: normalize(text)
+      });
+    });
+
+    document.querySelectorAll('.reference-section-group[id^="ref-group-"]').forEach(group => {
+      const title = group.querySelector('.reference-section-heading h3, h3')?.textContent.trim() || 'Reference';
+      const text = cleanSearchText(group);
+      records.push({
+        type: 'reference', id: group.id, sectionId: 'references', title,
+        moduleLabel: 'References', text, normTitle: normalize(title), normText: normalize(text)
+      });
+    });
+    return records;
+  }
+
+  let searchIndex = buildIndex();
+
+  function expandedTerms(query) {
+    const normalizedQuery = normalize(query);
+    const rawTokens = normalizedQuery.split(/[^a-z0-9_+#-]+/).filter(token => token.length >= 2);
+    const terms = new Set([normalizedQuery, ...rawTokens]);
+    rawTokens.forEach(token => (SEARCH_SYNONYMS[token] || []).forEach(term => terms.add(normalize(term))));
+    if (SEARCH_SYNONYMS[normalizedQuery]) SEARCH_SYNONYMS[normalizedQuery].forEach(term => terms.add(normalize(term)));
+    return [...terms].filter(Boolean).sort((a,b) => b.length - a.length);
+  }
+
+  function scoreRecord(record, query, terms) {
+    const nq = normalize(query);
+    if (!nq) return 0;
+    let score = 0;
+    if (record.normTitle.includes(nq)) score += 120;
+    if (record.normText.includes(nq)) score += 45;
+    terms.forEach((term, index) => {
+      const weight = index === 0 ? 1.25 : 1;
+      if (record.normTitle.includes(term)) score += 28 * weight;
+      if (record.normText.includes(term)) score += 7 * weight;
+    });
+    return score;
+  }
+
+  function findMatchPosition(record, query, terms) {
+    const nq = normalize(query);
+    const normalized = record.normText;
+    let position = normalized.indexOf(nq);
+    if (position >= 0) return position;
+    for (const term of terms) {
+      position = normalized.indexOf(term);
+      if (position >= 0) return position;
+    }
+    return 0;
+  }
+
+  function snippetFor(record, query, terms) {
+    const original = record.text || record.title;
+    const normalized = normalize(original);
+    const matchPosition = findMatchPosition(record, query, terms);
+    // Normalization preserves practical character positions for our English course text.
+    const start = Math.max(0, matchPosition - 85);
+    const end = Math.min(original.length, start + 245);
+    let snippet = original.slice(start, end).trim();
+    if (start > 0) snippet = `…${snippet}`;
+    if (end < original.length) snippet = `${snippet}…`;
+    return snippet;
+  }
+
+  function emphasize(value, query, terms) {
+    let safe = escapeHtml(value);
+    const highlightTerms = [...new Set([normalize(query), ...terms])]
+      .filter(term => term.length >= 2)
+      .sort((a,b) => b.length - a.length)
+      .slice(0, 10);
+    highlightTerms.forEach(term => {
+      const pattern = escapeRegExp(term).replace(/\\ /g, '\\s+');
+      try {
+        safe = safe.replace(new RegExp(`(${pattern})`, 'gi'), '<mark>$1</mark>');
+      } catch {}
+    });
+    return safe;
+  }
+
+  function runSearch(query, sectionId = null) {
+    const terms = expandedTerms(query);
+    return searchIndex
+      .filter(record => !sectionId || record.sectionId === sectionId)
+      .map(record => ({ ...record, score: scoreRecord(record, query, terms), terms }))
+      .filter(record => record.score > 0)
+      .sort((a,b) => b.score - a.score || a.title.localeCompare(b.title))
+      .slice(0, sectionId ? 7 : 10);
+  }
+
+  function clearContentSearchHighlights() {
+    document.querySelectorAll('mark.content-search-highlight').forEach(mark => {
+      const parent = mark.parentNode;
+      mark.replaceWith(document.createTextNode(mark.textContent || ''));
+      parent?.normalize?.();
+    });
+  }
+
+  function highlightContentTerms(root, terms) {
+    clearContentSearchHighlights();
+    if (!root || !terms.length) return;
+    const candidates = terms.filter(term => term.length >= 2).sort((a,b) => b.length - a.length).slice(0, 8);
+    if (!candidates.length) return;
+    const expression = new RegExp(`(${candidates.map(escapeRegExp).join('|')})`, 'gi');
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    let node;
+    while ((node = walker.nextNode()) && nodes.length < 80) {
+      const parent = node.parentElement;
+      if (!parent || parent.closest('script,style,button,input,textarea,select,.tooltip,.card-term-tooltip,.topic-learning-nav,.section-nav,.course-search-shell')) continue;
+      if (expression.test(node.nodeValue || '')) nodes.push(node);
+      expression.lastIndex = 0;
+    }
+    let count = 0;
+    nodes.forEach(textNode => {
+      if (count >= 30 || !textNode.parentNode) return;
+      const text = textNode.nodeValue || '';
+      const frag = document.createDocumentFragment();
+      let last = 0;
+      text.replace(expression, (match, _group, offset) => {
+        if (count >= 30) return match;
+        frag.append(document.createTextNode(text.slice(last, offset)));
+        const mark = document.createElement('mark');
+        mark.className = 'content-search-highlight';
+        mark.textContent = match;
+        frag.append(mark);
+        last = offset + match.length;
+        count += 1;
+        return match;
+      });
+      if (last === 0) return;
+      frag.append(document.createTextNode(text.slice(last)));
+      textNode.replaceWith(frag);
+      expression.lastIndex = 0;
+    });
+    const first = root.querySelector('mark.content-search-highlight');
+    if (first) setTimeout(() => first.scrollIntoView({behavior:'smooth', block:'center'}), 260);
+  }
+
+  function openSearchRecord(record, query, terms) {
+    document.querySelectorAll('.course-search-results.open').forEach(panel => panel.classList.remove('open'));
+    if (record.type === 'topic') {
+      showSection(record.sectionId, record.id);
+      setTimeout(() => highlightContentTerms(document.getElementById(record.id), [normalize(query), ...terms]), 260);
+      return;
+    }
+    if (record.type === 'glossary') {
+      showFullPage('glossary');
+      setTimeout(() => {
+        const target = document.getElementById(record.id);
+        target?.scrollIntoView({behavior:'smooth', block:'center'});
+        highlightContentTerms(target, [normalize(query), ...terms]);
+      }, 260);
+      return;
+    }
+    if (record.type === 'reference') {
+      showFullPage('references');
+      setTimeout(() => {
+        const target = document.getElementById(record.id);
+        target?.scrollIntoView({behavior:'smooth', block:'center'});
+        highlightContentTerms(target, [normalize(query), ...terms]);
+      }, 260);
+    }
+  }
+
+  function renderResults(shell, query) {
+    const input = shell.querySelector('input[type="search"]');
+    const resultsPanel = shell.querySelector('.course-search-results');
+    const clear = shell.querySelector('.course-search-clear');
+    const isModule = shell.dataset.courseSearch === 'module';
+    const sectionId = isModule ? shell.dataset.section : null;
+    const value = String(query || '').trim();
+    shell.classList.toggle('has-value', Boolean(value));
+    clear?.classList.toggle('visible', Boolean(value));
+    if (!value) {
+      resultsPanel.innerHTML = '';
+      resultsPanel.classList.remove('open');
+      clearContentSearchHighlights();
+      return;
+    }
+
+    const results = runSearch(value, sectionId);
+    const label = isModule
+      ? `${results.length} ${results.length === 1 ? 'match' : 'matches'} in this module`
+      : `${results.length} ${results.length === 1 ? 'match' : 'matches'} across the guide`;
+
+    resultsPanel.innerHTML = `
+      <div class="course-search-results-header"><span>${label}</span><small>Click a result to jump there</small></div>
+      ${results.length ? results.map((record, index) => `
+        <button class="course-search-result" type="button" data-result-index="${index}" role="option">
+          <span class="course-search-result-meta">${escapeHtml(record.moduleLabel)}</span>
+          <strong>${emphasize(record.title, value, record.terms)}</strong>
+          <p>${emphasize(snippetFor(record, value, record.terms), value, record.terms)}</p>
+          <i>→</i>
+        </button>
+      `).join('') : `<div class="course-search-empty"><strong>No matches yet</strong><span>Try another term, abbreviation, or feature name.</span></div>`}
+    `;
+    resultsPanel.classList.add('open');
+
+    resultsPanel.querySelectorAll('[data-result-index]').forEach(button => {
+      button.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        const record = results[Number(button.dataset.resultIndex)];
+        if (record) openSearchRecord(record, value, record.terms);
+      });
+    });
+  }
+
+  document.querySelectorAll('[data-course-search]').forEach(shell => {
+    const input = shell.querySelector('input[type="search"]');
+    const clear = shell.querySelector('.course-search-clear');
+    if (!input) return;
+    input.addEventListener('input', () => renderResults(shell, input.value));
+    input.addEventListener('focus', () => { if (input.value.trim()) renderResults(shell, input.value); });
+    input.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        input.value = '';
+        renderResults(shell, '');
+        input.blur();
+      }
+    });
+    clear?.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      input.value = '';
+      renderResults(shell, '');
+      input.focus();
+    });
+  });
+
+  document.addEventListener('click', event => {
+    if (event.target.closest('[data-course-search]')) return;
+    document.querySelectorAll('.course-search-results.open').forEach(panel => panel.classList.remove('open'));
+  });
+
+  // Expose a tiny refresh hook for future modules added without changing the search logic.
+  window.refreshTrainingSearchIndex = () => { searchIndex = buildIndex(); };
+})();
 
 // V17 navigation search
 const navigationSearch = document.getElementById("navigationSearch");
@@ -1201,4 +1555,392 @@ document.querySelectorAll('[data-module2-nav]').forEach(explorer => {
   });
   const initial = spots.find(spot => spot.classList.contains('active')) || spots[0];
   if (initial) activate(initial);
+});
+
+
+// V37 — Module 03 Lead Lifecycle explorer.
+document.querySelectorAll('[data-lead-lifecycle]').forEach(explorer => {
+  const number = explorer.querySelector('.lead-stage-number');
+  const title = explorer.querySelector('.lead-lifecycle-detail h4');
+  const text = explorer.querySelector('.lead-lifecycle-detail p');
+  const status = explorer.querySelector('.lead-lifecycle-detail small');
+  const stages = [...explorer.querySelectorAll('.lead-stage')];
+
+  const activate = stage => {
+    stages.forEach(item => item.classList.toggle('active', item === stage));
+    if (number) number.textContent = stage.dataset.number || '';
+    if (title) title.textContent = stage.dataset.title || '';
+    if (text) text.textContent = stage.dataset.text || '';
+    if (status) status.textContent = stage.dataset.status || '';
+  };
+
+  stages.forEach(stage => {
+    stage.addEventListener('mouseenter', () => activate(stage));
+    stage.addEventListener('focus', () => activate(stage));
+    stage.addEventListener('click', () => activate(stage));
+  });
+});
+
+
+// V38 — Alphabetical glossary navigation and automatic glossary linking.
+(function initGlossaryEnhancements() {
+  const glossaryEntries = [...document.querySelectorAll('.glossary-page-item')];
+  const azButtons = [...document.querySelectorAll('[data-letter-jump]')];
+  const availableLetters = new Set(glossaryEntries.map(item => item.dataset.letter).filter(Boolean));
+
+  azButtons.forEach(button => {
+    const letter = button.dataset.letterJump;
+    const available = availableLetters.has(letter);
+    button.disabled = !available;
+    button.classList.toggle('unavailable', !available);
+    if (!available) return;
+    button.addEventListener('click', () => {
+      const search = document.getElementById('glossaryPageSearch');
+      if (search?.value) {
+        search.value = '';
+        search.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+      document.getElementById(`glossary-letter-${letter}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Highlight the visible letter while browsing the glossary.
+  if ('IntersectionObserver' in window) {
+    const headings = [...document.querySelectorAll('[data-glossary-letter-heading]')];
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+      if (!visible) return;
+      const letter = visible.target.dataset.glossaryLetterHeading;
+      azButtons.forEach(button => button.classList.toggle('active', button.dataset.letterJump === letter));
+    }, { rootMargin: '-145px 0px -72% 0px', threshold: 0 });
+    headings.forEach(heading => observer.observe(heading));
+  }
+
+  const definitions = {};
+  glossaryEntries.forEach(item => {
+    const key = item.id.replace(/^glossary-/, '');
+    definitions[key] = {
+      title: item.querySelector('h3')?.textContent.trim() || key,
+      definition: item.querySelector('p')?.textContent.trim() || ''
+    };
+  });
+
+  const aliases = {
+    'blacktab': ['BlackTab'],
+    'pod': ['POD'],
+    'soql': ['SOQL'],
+    'uat': ['UAT'],
+    'opportunity': ['Opportunity', 'Opportunities'],
+    'sla': ['SLA', 'Service Level Agreement'],
+    'slo': ['SLO', 'Service Level Objective'],
+    'agentforce': ['Agentforce'],
+    'rca': ['RCA', 'Root Cause Analysis'],
+    'gho': ['GHO', 'Global Handover Template'],
+    'product-topic': ['Product & Topic', 'Product and Topic'],
+    'omni-channel': ['Omni-Channel', 'Omni Channel', 'Omnichannel'],
+    'queue': ['Queue', 'Queues'],
+    'presence-status': ['Presence Status', 'Presence Statuses'],
+    'skills-based-routing': ['Skills-Based Routing', 'Skills Based Routing', 'Skill-Based Routing'],
+    'csat': ['CSAT', 'Customer Satisfaction'],
+    'ttr': ['TTR', 'Time to Resolution'],
+    'v2mom': ['V2MOM'],
+    'assembled': ['Assembled'],
+    'c360': ['Customer 360 (C360)', 'Customer 360', 'C360'],
+    'multitenancy': ['Multi-tenancy', 'Multi tenancy', 'Multitenancy', 'Multi-tenant'],
+    'sandbox': ['Sandbox', 'Sandboxes'],
+    'metadata': ['Metadata'],
+    'user-license': ['User License', 'User Licenses'],
+    'feature-license': ['Feature License', 'Feature Licenses'],
+    'permission-set-license': ['Permission Set License', 'Permission Set Licenses', 'PSL'],
+    'app-launcher': ['App Launcher'],
+    'schema-builder': ['Schema Builder'],
+    'record-type': ['Record Type', 'Record Types'],
+    'page-layout': ['Page Layout', 'Page Layouts'],
+    'dynamic-forms': ['Dynamic Forms & Actions', 'Dynamic Forms', 'Dynamic Actions'],
+    'orgfarm': ['OrgFarm', 'Org Farm'],
+    'storm': ['Storm Org', 'Storm Orgs', 'Storm'],
+    'person-account': ['Person Account', 'Person Accounts'],
+    'lead': ['Lead', 'Leads'],
+    'bant': ['BANT'],
+    'web-to-lead': ['Web-to-Lead', 'Web to Lead', 'W2L'],
+    'recaptcha': ['reCAPTCHA'],
+    'lead-assignment-rule': ['Lead Assignment Rule', 'Lead Assignment Rules'],
+    'auto-response-rule': ['Auto-Response Rule', 'Auto-Response Rules', 'Auto Response Rule', 'Auto Response Rules'],
+    'lead-conversion': ['Lead Conversion'],
+    'matching-rule': ['Matching Rule', 'Matching Rules'],
+    'duplicate-rule': ['Duplicate Rule', 'Duplicate Rules'],
+    'forecast-category': ['Forecast Category', 'Forecast Categories'],
+    'quote': ['Quote', 'Quotes', 'Quote Line Items'],
+    'approval-process': ['Approval Process', 'Approval Processes'],
+    'experience-cloud': ['Experience Cloud']
+  };
+
+  // Ensure every glossary entry participates even if a future term is added without a manual alias list.
+  glossaryEntries.forEach(item => {
+    const key = item.id.replace(/^glossary-/, '');
+    const title = item.querySelector('h3')?.textContent.trim();
+    if (!aliases[key]) aliases[key] = title ? [title] : [];
+    else if (title && !aliases[key].some(alias => alias.toLowerCase() === title.toLowerCase())) aliases[key].push(title);
+  });
+
+  const aliasRecords = [];
+  Object.entries(aliases).forEach(([key, terms]) => {
+    if (!definitions[key]) return;
+    terms.forEach(term => {
+      if (term && term.length > 1) aliasRecords.push({ key, term });
+    });
+  });
+  aliasRecords.sort((a,b) => b.term.length - a.term.length);
+
+  const lookup = new Map();
+  aliasRecords.forEach(record => {
+    const normalized = record.term.toLocaleLowerCase();
+    if (!lookup.has(normalized)) lookup.set(normalized, record.key);
+  });
+
+  const escaped = [...lookup.keys()]
+    .sort((a,b) => b.length - a.length)
+    .map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  if (!escaped.length) return;
+  const expression = new RegExp(`(^|[^A-Za-z0-9_])(${escaped.join('|')})(?=$|[^A-Za-z0-9_])`, 'gi');
+
+  const skipSelector = [
+    'script','style','input','textarea','select','option','button','label','a',
+    '.inline-term','.tooltip','.glossary-page-item','.module-topic-dropdown','.topic-learning-nav',
+    '.section-nav','.course-tree','.module-topic-chips','.module-hub-hero'
+  ].join(',');
+
+  function bindAutoTerm(span) {
+    span.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      openGlossaryTerm(span.dataset.glossaryLink);
+    });
+    span.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openGlossaryTerm(span.dataset.glossaryLink);
+      }
+    });
+  }
+
+  function linkRoot(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        if (!node.nodeValue || node.nodeValue.trim().length < 2) return NodeFilter.FILTER_REJECT;
+        const parent = node.parentElement;
+        if (!parent || parent.closest(skipSelector)) return NodeFilter.FILTER_REJECT;
+        expression.lastIndex = 0;
+        return expression.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+
+    nodes.forEach(node => {
+      const text = node.nodeValue;
+      expression.lastIndex = 0;
+      let match;
+      let cursor = 0;
+      const fragment = document.createDocumentFragment();
+      while ((match = expression.exec(text)) !== null) {
+        const prefix = match[1] || '';
+        const matchedTerm = match[2];
+        const fullStart = match.index;
+        const termStart = fullStart + prefix.length;
+        if (fullStart > cursor) fragment.append(document.createTextNode(text.slice(cursor, fullStart)));
+        if (prefix) fragment.append(document.createTextNode(prefix));
+
+        const key = lookup.get(matchedTerm.toLocaleLowerCase());
+        if (!key || !definitions[key]) {
+          fragment.append(document.createTextNode(matchedTerm));
+        } else {
+          const span = document.createElement('span');
+          span.className = 'inline-term glossary-link-term auto-glossary-term';
+          span.tabIndex = 0;
+          span.dataset.glossaryLink = key;
+          span.append(document.createTextNode(matchedTerm));
+          const tooltip = document.createElement('span');
+          tooltip.className = 'tooltip';
+          tooltip.textContent = `${definitions[key].definition} Click to open the glossary.`;
+          span.append(tooltip);
+          bindAutoTerm(span);
+          fragment.append(span);
+        }
+        cursor = termStart + matchedTerm.length;
+      }
+      if (cursor < text.length) fragment.append(document.createTextNode(text.slice(cursor)));
+      node.replaceWith(fragment);
+    });
+  }
+
+  document.querySelectorAll('.training-section').forEach(linkRoot);
+  updateGlossaryLetterVisibility();
+})();
+
+// V38 — Final Module Quiz chips on Home show their saved result when available.
+function updateHomeFinalQuizChips() {
+  let results = {};
+  try { results = JSON.parse(localStorage.getItem('trainingGuideModuleFinalResults') || '{}'); } catch { results = {}; }
+  document.querySelectorAll('[data-module-final-home]').forEach(chip => {
+    const moduleId = chip.dataset.moduleFinalHome;
+    const status = chip.querySelector('small');
+    const result = results[moduleId];
+    if (!status || chip.classList.contains('in-progress')) return;
+    if (result && Number.isFinite(result.score)) {
+      status.textContent = `${result.score}%`;
+      chip.classList.add('completed');
+    } else {
+      status.textContent = 'Not completed';
+      chip.classList.remove('completed');
+    }
+  });
+}
+updateHomeFinalQuizChips();
+document.querySelectorAll('.module-final-quiz .quiz-button').forEach(button => {
+  button.addEventListener('click', () => setTimeout(updateHomeFinalQuizChips, 30));
+});
+
+// V43 — one global, viewport-safe tooltip layer.
+// Original tooltip nodes stay inside their terms for semantics/click behavior.
+// A single fixed clone is used for display so cards, overflow and transforms can never clip it.
+(function initGlobalTooltipLayer(){
+  const ownerSelector = '.inline-term, .term-pill, .inline-help, .card-inline-term';
+  const tooltipSelector = ':scope > .tooltip, :scope > .card-term-tooltip';
+
+  let activeOwner = null;
+  const layer = document.createElement('div');
+  layer.id = 'global-tooltip-layer';
+  layer.className = 'global-tooltip-layer';
+  layer.setAttribute('role', 'tooltip');
+  layer.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(layer);
+  document.body.classList.add('tooltip-system-ready');
+
+  function getTip(owner){
+    return owner?.querySelector?.(tooltipSelector) || null;
+  }
+
+  function position(owner){
+    if(!owner || owner !== activeOwner) return;
+    const rect = owner.getBoundingClientRect();
+    const margin = 14;
+    const gap = 10;
+
+    // Measure with the final width constraints already applied by CSS.
+    layer.style.left = `${margin}px`;
+    layer.style.top = `${margin}px`;
+    layer.style.visibility = 'hidden';
+    layer.style.opacity = '1';
+    layer.style.display = 'block';
+    const tipRect = layer.getBoundingClientRect();
+    const width = Math.min(tipRect.width || 310, Math.max(180, window.innerWidth - margin * 2));
+    const height = Math.min(tipRect.height || 90, Math.max(60, window.innerHeight - margin * 2));
+
+    let left = rect.left + (rect.width / 2) - (width / 2);
+    left = Math.max(margin, Math.min(left, window.innerWidth - width - margin));
+
+    const above = rect.top - gap - height;
+    const below = rect.bottom + gap;
+    const roomAbove = rect.top - margin;
+    const roomBelow = window.innerHeight - rect.bottom - margin;
+    let top = roomAbove >= height + gap || roomAbove > roomBelow ? above : below;
+    top = Math.max(margin, Math.min(top, window.innerHeight - height - margin));
+
+    layer.style.left = `${Math.round(left)}px`;
+    layer.style.top = `${Math.round(top)}px`;
+    layer.style.visibility = 'visible';
+    layer.style.opacity = '1';
+    layer.setAttribute('aria-hidden', 'false');
+  }
+
+  function open(owner){
+    const tip = getTip(owner);
+    if(!tip) return;
+    activeOwner = owner;
+    layer.innerHTML = tip.innerHTML;
+    layer.classList.toggle('card-tooltip-copy', tip.classList.contains('card-term-tooltip'));
+    position(owner);
+  }
+
+  function close(owner){
+    if(owner && activeOwner !== owner) return;
+    activeOwner = null;
+    layer.style.opacity = '0';
+    layer.style.visibility = 'hidden';
+    layer.setAttribute('aria-hidden', 'true');
+  }
+
+  document.addEventListener('mouseover', event => {
+    const owner = event.target.closest?.(ownerSelector);
+    if(!owner || !getTip(owner)) return;
+    if(event.relatedTarget && owner.contains(event.relatedTarget)) return;
+    open(owner);
+  });
+
+  document.addEventListener('mouseout', event => {
+    const owner = event.target.closest?.(ownerSelector);
+    if(!owner || activeOwner !== owner) return;
+    if(event.relatedTarget && owner.contains(event.relatedTarget)) return;
+    close(owner);
+  });
+
+  document.addEventListener('focusin', event => {
+    const owner = event.target.closest?.(ownerSelector);
+    if(owner && getTip(owner)) open(owner);
+  });
+
+  document.addEventListener('focusout', event => {
+    const owner = event.target.closest?.(ownerSelector);
+    if(owner && activeOwner === owner) close(owner);
+  });
+
+  const reposition = () => {
+    if(activeOwner) requestAnimationFrame(() => position(activeOwner));
+  };
+  window.addEventListener('resize', reposition, {passive:true});
+  window.addEventListener('scroll', reposition, {passive:true, capture:true});
+})();
+
+// V43 — normalize two-digit learning-card counters so dark mode has one visual language.
+(function markLearningNumberBadges(){
+  document.querySelectorAll('.learning-phase span').forEach(span => {
+    if(span.closest('.tooltip, .card-term-tooltip')) return;
+    if(/^\d{2}$/.test((span.textContent || '').trim())) span.classList.add('learning-number-badge');
+  });
+})();
+
+
+// V48 — final Module 04 chip navigation.
+document.querySelectorAll('[data-module-final-home]:not(.in-progress)').forEach(chip => {
+  chip.style.cursor = 'pointer';
+  chip.addEventListener('click', () => {
+    const moduleId = chip.dataset.moduleFinalHome;
+    const sectionMap = { '01':'support-org','02':'platform-fundamentals','03':'sales-experience','04':'service-cloud' };
+    const target = `module-${moduleId}-final`;
+    if (sectionMap[moduleId] && document.getElementById(target)) {
+      showTrainingTopic(sectionMap[moduleId], target);
+    }
+  });
+});
+
+
+// V55 interactive custom field type explorer
+const fieldTypeCards = document.querySelectorAll('.field-type-card');
+const fieldTypeIcon = document.getElementById('fieldTypeIcon');
+const fieldTypeTitle = document.getElementById('fieldTypeTitle');
+const fieldTypeDescription = document.getElementById('fieldTypeDescription');
+const fieldTypeExample = document.getElementById('fieldTypeExample');
+function activateFieldType(card) {
+  fieldTypeCards.forEach(item => item.classList.toggle('active', item === card));
+  if (fieldTypeIcon) fieldTypeIcon.textContent = card.dataset.icon || '•';
+  if (fieldTypeTitle) fieldTypeTitle.textContent = card.dataset.title || '';
+  if (fieldTypeDescription) fieldTypeDescription.textContent = card.dataset.description || '';
+  if (fieldTypeExample) fieldTypeExample.textContent = card.dataset.example || '';
+}
+fieldTypeCards.forEach(card => {
+  card.addEventListener('mouseenter', () => activateFieldType(card));
+  card.addEventListener('focus', () => activateFieldType(card));
+  card.addEventListener('click', () => activateFieldType(card));
 });
