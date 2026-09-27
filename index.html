@@ -220,12 +220,21 @@
 </button>
 <div class="tree-children"><button data-subtarget="problem-boundary">09.1 · Define the Problem Boundary</button><button data-subtarget="understand-symptom">09.2 · Understand the Symptom</button><button data-subtarget="business-impact">09.3 · Business Impact</button><button data-subtarget="reproduce">09.4 · Reproduce</button><button data-subtarget="research-before-troubleshooting">09.5 · Research Before Troubleshooting</button><button data-subtarget="evidence-hypothesis">09.6 · Evidence &amp; Hypothesis</button><button data-subtarget="pattern-recognition">09.7–09.8 · Pattern Recognition &amp; RCA</button><button data-subtarget="escalation-readiness">09.9 · Escalation Readiness</button><button data-subtarget="swarming">09.10 · Swarming</button><button data-subtarget="release-readiness">09.11 · Release Readiness</button><button data-subtarget="final-checklist">09.12 · Final Investigation Checklist</button><button data-subtarget="module-09-final">Final Module Quiz</button></div>
 </div>
-<div class="tree-group upcoming">
+<div class="tree-group">
 <button class="tree-parent" data-section="real-cases">
 <span>10 · Real Case Library</span><span class="chevron">⌄</span>
 </button>
 <div class="tree-children">
-<div class="tree-placeholder">Coming later · real customer cases will be added as the final section.</div>
+<button data-subtarget="case-library-guide">Guide · Working a Case</button>
+<button data-subtarget="case-web-to-case-spam">Case 01 · Web-to-Case Spam Prevention</button>
+<button data-subtarget="case-appexchange-package">Case 02 · Third-Party AppExchange Package</button>
+<button data-subtarget="case-intermittent-save">Case 03 · Intermittent Case Save Failures</button>
+<button data-subtarget="case-printable-view-knowledge">Case 04 · Printable View Missing in Knowledge</button>
+<button data-subtarget="case-api-request-consumption">Case 05 · Daily API Request Consumption</button>
+<button data-subtarget="case-web-to-lead-access">Case 06 · Web-to-Lead Cross-Reference Access</button>
+<button data-subtarget="case-web-to-case-file-attachments">Case 07 · Web-to-Case File Attachments</button>
+<button data-subtarget="case-omni-channel-inbox-blank">Case 08 · Omni-Channel Blank Inbox</button>
+<button data-subtarget="case-kpi-report-guidance">Case 09 · Case Resolution KPI Report</button>
 </div>
 </div>
 </nav>
@@ -476,7 +485,7 @@
 <div class="progress-ring large" id="mainProgressRing"><span id="mainProgressPercent">0%</span></div>
 <div>
 <div class="big-stat" id="mainProgressStat">0 of 105</div>
-<p>Topics across Modules 01–09. Module 10 · Real Case Library will be added later and is not counted yet.</p>
+<p>Topics across Modules 01–09. Module 10 · Real Case Library is supplemental and remains outside the core course-progress calculation.</p>
 </div>
 </div>
 <div class="learning-framework-card">
@@ -557,11 +566,12 @@
 <div class="module-topic-chips"><span data-topic-chip="problem-boundary">09.1 Define the Problem Boundary</span><span data-topic-chip="understand-symptom">09.2 Understand the Symptom</span><span data-topic-chip="business-impact">09.3 Business Impact</span><span data-topic-chip="reproduce">09.4 Reproduce</span><span data-topic-chip="research-before-troubleshooting">09.5 Research Before Troubleshooting</span><span data-topic-chip="evidence-hypothesis">09.6 Evidence &amp; Hypothesis</span><span data-topic-chip="pattern-recognition">09.7–09.8 Pattern Recognition &amp; RCA</span><span data-topic-chip="escalation-readiness">09.9 Escalation Readiness</span><span data-topic-chip="swarming">09.10 Swarming</span><span data-topic-chip="release-readiness">09.11 Release Readiness</span><span data-topic-chip="final-checklist">09.12 Final Investigation Checklist</span><span class="module-final-home-chip" data-module-final-home="09" data-section="structured-investigation" data-subtarget="module-09-final">Final Module Quiz <small>Not completed</small></span></div>
 </div>
 </article>
-<article class="course-module-card upcoming-module" data-module="10">
+<article class="course-module-card" data-module="10">
 <div class="module-number">10</div>
 <div class="module-copy">
 <h3>Real Case Library</h3>
-<p>Coming later · excluded from course progress until the case library is built.</p>
+<p>9 cases available · Practical case library in progress · Supplemental to core course progress</p>
+<div class="module-topic-chips"><span data-topic-chip="case-library-guide">Guide · Working a Case</span><span data-topic-chip="case-web-to-case-spam">Case 01 · Web-to-Case Spam Prevention</span><span data-topic-chip="case-appexchange-package">Case 02 · Third-Party AppExchange Package</span><span data-topic-chip="case-intermittent-save">Case 03 · Intermittent Case Save Failures</span><span data-topic-chip="case-printable-view-knowledge">Case 04 · Printable View Missing in Knowledge</span><span data-topic-chip="case-api-request-consumption">Case 05 · Daily API Request Consumption</span><span data-topic-chip="case-web-to-lead-access">Case 06 · Web-to-Lead Cross-Reference Access</span><span data-topic-chip="case-web-to-case-file-attachments">Case 07 · Web-to-Case File Attachments</span><span data-topic-chip="case-omni-channel-inbox-blank">Case 08 · Omni-Channel Blank Inbox</span><span data-topic-chip="case-kpi-report-guidance">Case 09 · Case Resolution KPI Report</span></div>
 </div>
 </article>
 </div>
@@ -4949,24 +4959,743 @@
 <button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. A complete investigation tells a connected evidence story.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div></div></section>
 <div class="quiz-completion-note" data-quiz-completion="final-checklist">Complete the quiz to finish this topic.</div>
 <div class="section-nav"><button class="section-nav-btn prev" data-go="structured-investigation" data-subtarget="release-readiness">← Previous: Release Readiness</button><button class="section-nav-btn next" data-go="structured-investigation" data-subtarget="module-09-final">Next: Module 09 Final Quiz →</button></div>
-</article><article class="topic-section real-content-topic module-final-topic" id="module-09-final"><div class="module-final-hero"><div><span class="topic-index">MODULE 09 · FINAL CHECK</span><h3>Structured Investigation, RCA &amp; Collaboration, Final Quiz</h3><p>25 questions covering scope, symptom framing, impact, reproduction, research, evidence, pattern recognition, RCA, escalation, swarming, release readiness, and the final investigation checklist.</p></div><div class="module-final-count"><strong>25</strong><span>questions</span></div></div><div class="module-final-guide"><span>09.1–09.3</span><span>09.4–09.6</span><span>09.7–09.8</span><span>09.9–09.10</span><span>09.11–09.12</span></div><div class="quick-check module-final-quiz" data-module-final="09"><div class="quiz-kicker">MODULE 09 FINAL QUIZ</div><div class="quiz-question"><h3>1. What should be defined before deep troubleshooting?</h3><label><input name="module-09-final-quiz-1" type="radio" value="a"/>The scope of the issue.</label><label><input name="module-09-final-quiz-1" type="radio" value="b"/>The root cause.</label><label><input name="module-09-final-quiz-1" type="radio" value="c"/>An escalation.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>2. What makes a useful symptom description?</h3><label><input name="module-09-final-quiz-2" type="radio" value="a"/>Exact action, expected result, actual result, and evidence.</label><label><input name="module-09-final-quiz-2" type="radio" value="b"/>Only the customer conclusion.</label><label><input name="module-09-final-quiz-2" type="radio" value="c"/>Only severity.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>3. Why record whether a symptom is intermittent?</h3><label><input name="module-09-final-quiz-3" type="radio" value="a"/>Frequency changes the reproduction and evidence strategy.</label><label><input name="module-09-final-quiz-3" type="radio" value="b"/>It changes the object API name.</label><label><input name="module-09-final-quiz-3" type="radio" value="c"/>It assigns a page layout.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>4. What connects a technical symptom to correct prioritization?</h3><label><input name="module-09-final-quiz-4" type="radio" value="a"/>Verified business impact.</label><label><input name="module-09-final-quiz-4" type="radio" value="b"/>Case age alone.</label><label><input name="module-09-final-quiz-4" type="radio" value="c"/>The engineer seniority.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>5. Why verify a workaround?</h3><label><input name="module-09-final-quiz-5" type="radio" value="a"/>It shows whether the business can continue despite the issue.</label><label><input name="module-09-final-quiz-5" type="radio" value="b"/>It proves root cause.</label><label><input name="module-09-final-quiz-5" type="radio" value="c"/>It disables automation.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>6. What is the goal of reproduction?</h3><label><input name="module-09-final-quiz-6" type="radio" value="a"/>Convert the report into repeatable evidence.</label><label><input name="module-09-final-quiz-6" type="radio" value="b"/>Change Production until it works.</label><label><input name="module-09-final-quiz-6" type="radio" value="c"/>Prove the customer is wrong.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>7. What should you compare when reproduction fails?</h3><label><input name="module-09-final-quiz-7" type="radio" value="a"/>Working and failing contexts.</label><label><input name="module-09-final-quiz-7" type="radio" value="b"/>Only case titles.</label><label><input name="module-09-final-quiz-7" type="radio" value="c"/>Only customer names.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>8. Why research previous cases and documentation?</h3><label><input name="module-09-final-quiz-8" type="radio" value="a"/>Reuse what has already been proven or ruled out.</label><label><input name="module-09-final-quiz-8" type="radio" value="b"/>Skip validation.</label><label><input name="module-09-final-quiz-8" type="radio" value="c"/>Avoid collecting evidence.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>9. Is a similar GUS title enough to prove the same defect?</h3><label><input name="module-09-final-quiz-9" type="radio" value="a"/>No.</label><label><input name="module-09-final-quiz-9" type="radio" value="b"/>Yes.</label><label><input name="module-09-final-quiz-9" type="radio" value="c"/>Only for Sev1.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>10. What is a hypothesis?</h3><label><input name="module-09-final-quiz-10" type="radio" value="a"/>A possible explanation that must be tested with evidence.</label><label><input name="module-09-final-quiz-10" type="radio" value="b"/>A confirmed root cause.</label><label><input name="module-09-final-quiz-10" type="radio" value="c"/>A case status.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>11. What does configuration evidence show?</h3><label><input name="module-09-final-quiz-11" type="radio" value="a"/>What Salesforce is configured to do.</label><label><input name="module-09-final-quiz-11" type="radio" value="b"/>Only customer sentiment.</label><label><input name="module-09-final-quiz-11" type="radio" value="c"/>Only release dates.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>12. What can a cluster of similar cases indicate?</h3><label><input name="module-09-final-quiz-12" type="radio" value="a"/>A possible shared root cause or broader issue.</label><label><input name="module-09-final-quiz-12" type="radio" value="b"/>That all users have the same permissions.</label><label><input name="module-09-final-quiz-12" type="radio" value="c"/>That RCA is unnecessary.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>13. What is RCA trying to identify?</h3><label><input name="module-09-final-quiz-13" type="radio" value="a"/>The underlying cause and causal chain.</label><label><input name="module-09-final-quiz-13" type="radio" value="b"/>Only the visible error line.</label><label><input name="module-09-final-quiz-13" type="radio" value="c"/>Only severity.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>14. Why combine pattern recognition with RCA?</h3><label><input name="module-09-final-quiz-14" type="radio" value="a"/>Patterns identify shared variables, then RCA validates the cause.</label><label><input name="module-09-final-quiz-14" type="radio" value="b"/>Patterns automatically prove root cause.</label><label><input name="module-09-final-quiz-14" type="radio" value="c"/>RCA only applies to isolated cases.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>15. What makes an escalation actionable?</h3><label><input name="module-09-final-quiz-15" type="radio" value="a"/>Complete context, evidence, ruled out paths, and a specific ask.</label><label><input name="module-09-final-quiz-15" type="radio" value="b"/>Only severity.</label><label><input name="module-09-final-quiz-15" type="radio" value="c"/>Only an error screenshot.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>16. What should be checked before creating duplicate engineering work?</h3><label><input name="module-09-final-quiz-16" type="radio" value="a"/>Known Issues and existing defects.</label><label><input name="module-09-final-quiz-16" type="radio" value="b"/>Only dashboards.</label><label><input name="module-09-final-quiz-16" type="radio" value="c"/>Only role hierarchy.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>17. What is the purpose of swarming?</h3><label><input name="module-09-final-quiz-17" type="radio" value="a"/>Bring expertise into the investigation while maintaining clear ownership.</label><label><input name="module-09-final-quiz-17" type="radio" value="b"/>Transfer every case immediately.</label><label><input name="module-09-final-quiz-17" type="radio" value="c"/>Replace documentation.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>18. What should a strong Swarm Request contain?</h3><label><input name="module-09-final-quiz-18" type="radio" value="a"/>Customer experience, work completed, evidence, and the specific ask.</label><label><input name="module-09-final-quiz-18" type="radio" value="b"/>Only the case number.</label><label><input name="module-09-final-quiz-18" type="radio" value="c"/>Only the product name.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>19. When should a swarm be closed?</h3><label><input name="module-09-final-quiz-19" type="radio" value="a"/>When the collaboration is genuinely complete.</label><label><input name="module-09-final-quiz-19" type="radio" value="b"/>At the end of every day.</label><label><input name="module-09-final-quiz-19" type="radio" value="c"/>As soon as another engineer joins.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>20. How should “it started after the release” be treated?</h3><label><input name="module-09-final-quiz-20" type="radio" value="a"/>As a clue that must be validated.</label><label><input name="module-09-final-quiz-20" type="radio" value="b"/>As proof of regression.</label><label><input name="module-09-final-quiz-20" type="radio" value="c"/>As irrelevant.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>21. What helps prove a release regression?</h3><label><input name="module-09-final-quiz-21" type="radio" value="a"/>A comparison showing changed behavior between versions under equivalent conditions.</label><label><input name="module-09-final-quiz-21" type="radio" value="b"/>The word regression in the case.</label><label><input name="module-09-final-quiz-21" type="radio" value="c"/>One screenshot.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>22. What should the final case story include?</h3><label><input name="module-09-final-quiz-22" type="radio" value="a"/>Problem, impact, evidence, tests, conclusion, and next action.</label><label><input name="module-09-final-quiz-22" type="radio" value="b"/>Only the final answer.</label><label><input name="module-09-final-quiz-22" type="radio" value="c"/>Only internal notes.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>23. Why review recent changes and timelines?</h3><label><input name="module-09-final-quiz-23" type="radio" value="a"/>To test whether a change could explain the symptom.</label><label><input name="module-09-final-quiz-23" type="radio" value="b"/>To assign blame automatically.</label><label><input name="module-09-final-quiz-23" type="radio" value="c"/>To update a page layout.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>24. Should a nearby change be treated as root cause immediately?</h3><label><input name="module-09-final-quiz-24" type="radio" value="a"/>No, it must be validated against the symptom.</label><label><input name="module-09-final-quiz-24" type="radio" value="b"/>Yes, always.</label><label><input name="module-09-final-quiz-24" type="radio" value="c"/>Only if it involved Flow.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>25. What is the overall Module 09 mindset?</h3><label><input name="module-09-final-quiz-25" type="radio" value="a"/>Build a repeatable evidence based story from scope to next action.</label><label><input name="module-09-final-quiz-25" type="radio" value="b"/>Use the most advanced tool first.</label><label><input name="module-09-final-quiz-25" type="radio" value="c"/>Escalate before reproduction.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div></div><div class="module-final-completion" data-module-final-completion="09">Answer all 25 questions to see your final Module 09 score.</div><div class="section-nav"><button class="section-nav-btn prev" data-go="structured-investigation" data-subtarget="final-checklist">← Previous: Final Investigation Checklist</button><button class="section-nav-btn next" data-go="overview">Back to Home →</button></div></article></section>
+</article><article class="topic-section real-content-topic module-final-topic" id="module-09-final"><div class="module-final-hero"><div><span class="topic-index">MODULE 09 · FINAL CHECK</span><h3>Structured Investigation, RCA &amp; Collaboration, Final Quiz</h3><p>25 questions covering scope, symptom framing, impact, reproduction, research, evidence, pattern recognition, RCA, escalation, swarming, release readiness, and the final investigation checklist.</p></div><div class="module-final-count"><strong>25</strong><span>questions</span></div></div><div class="module-final-guide"><span>09.1–09.3</span><span>09.4–09.6</span><span>09.7–09.8</span><span>09.9–09.10</span><span>09.11–09.12</span></div><div class="quick-check module-final-quiz" data-module-final="09"><div class="quiz-kicker">MODULE 09 FINAL QUIZ</div><div class="quiz-question"><h3>1. What should be defined before deep troubleshooting?</h3><label><input name="module-09-final-quiz-1" type="radio" value="a"/>The scope of the issue.</label><label><input name="module-09-final-quiz-1" type="radio" value="b"/>The root cause.</label><label><input name="module-09-final-quiz-1" type="radio" value="c"/>An escalation.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>2. What makes a useful symptom description?</h3><label><input name="module-09-final-quiz-2" type="radio" value="a"/>Exact action, expected result, actual result, and evidence.</label><label><input name="module-09-final-quiz-2" type="radio" value="b"/>Only the customer conclusion.</label><label><input name="module-09-final-quiz-2" type="radio" value="c"/>Only severity.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>3. Why record whether a symptom is intermittent?</h3><label><input name="module-09-final-quiz-3" type="radio" value="a"/>Frequency changes the reproduction and evidence strategy.</label><label><input name="module-09-final-quiz-3" type="radio" value="b"/>It changes the object API name.</label><label><input name="module-09-final-quiz-3" type="radio" value="c"/>It assigns a page layout.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>4. What connects a technical symptom to correct prioritization?</h3><label><input name="module-09-final-quiz-4" type="radio" value="a"/>Verified business impact.</label><label><input name="module-09-final-quiz-4" type="radio" value="b"/>Case age alone.</label><label><input name="module-09-final-quiz-4" type="radio" value="c"/>The engineer seniority.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>5. Why verify a workaround?</h3><label><input name="module-09-final-quiz-5" type="radio" value="a"/>It shows whether the business can continue despite the issue.</label><label><input name="module-09-final-quiz-5" type="radio" value="b"/>It proves root cause.</label><label><input name="module-09-final-quiz-5" type="radio" value="c"/>It disables automation.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>6. What is the goal of reproduction?</h3><label><input name="module-09-final-quiz-6" type="radio" value="a"/>Convert the report into repeatable evidence.</label><label><input name="module-09-final-quiz-6" type="radio" value="b"/>Change Production until it works.</label><label><input name="module-09-final-quiz-6" type="radio" value="c"/>Prove the customer is wrong.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>7. What should you compare when reproduction fails?</h3><label><input name="module-09-final-quiz-7" type="radio" value="a"/>Working and failing contexts.</label><label><input name="module-09-final-quiz-7" type="radio" value="b"/>Only case titles.</label><label><input name="module-09-final-quiz-7" type="radio" value="c"/>Only customer names.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>8. Why research previous cases and documentation?</h3><label><input name="module-09-final-quiz-8" type="radio" value="a"/>Reuse what has already been proven or ruled out.</label><label><input name="module-09-final-quiz-8" type="radio" value="b"/>Skip validation.</label><label><input name="module-09-final-quiz-8" type="radio" value="c"/>Avoid collecting evidence.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>9. Is a similar GUS title enough to prove the same defect?</h3><label><input name="module-09-final-quiz-9" type="radio" value="a"/>No.</label><label><input name="module-09-final-quiz-9" type="radio" value="b"/>Yes.</label><label><input name="module-09-final-quiz-9" type="radio" value="c"/>Only for Sev1.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>10. What is a hypothesis?</h3><label><input name="module-09-final-quiz-10" type="radio" value="a"/>A possible explanation that must be tested with evidence.</label><label><input name="module-09-final-quiz-10" type="radio" value="b"/>A confirmed root cause.</label><label><input name="module-09-final-quiz-10" type="radio" value="c"/>A case status.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>11. What does configuration evidence show?</h3><label><input name="module-09-final-quiz-11" type="radio" value="a"/>What Salesforce is configured to do.</label><label><input name="module-09-final-quiz-11" type="radio" value="b"/>Only customer sentiment.</label><label><input name="module-09-final-quiz-11" type="radio" value="c"/>Only release dates.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>12. What can a cluster of similar cases indicate?</h3><label><input name="module-09-final-quiz-12" type="radio" value="a"/>A possible shared root cause or broader issue.</label><label><input name="module-09-final-quiz-12" type="radio" value="b"/>That all users have the same permissions.</label><label><input name="module-09-final-quiz-12" type="radio" value="c"/>That RCA is unnecessary.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>13. What is RCA trying to identify?</h3><label><input name="module-09-final-quiz-13" type="radio" value="a"/>The underlying cause and causal chain.</label><label><input name="module-09-final-quiz-13" type="radio" value="b"/>Only the visible error line.</label><label><input name="module-09-final-quiz-13" type="radio" value="c"/>Only severity.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>14. Why combine pattern recognition with RCA?</h3><label><input name="module-09-final-quiz-14" type="radio" value="a"/>Patterns identify shared variables, then RCA validates the cause.</label><label><input name="module-09-final-quiz-14" type="radio" value="b"/>Patterns automatically prove root cause.</label><label><input name="module-09-final-quiz-14" type="radio" value="c"/>RCA only applies to isolated cases.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>15. What makes an escalation actionable?</h3><label><input name="module-09-final-quiz-15" type="radio" value="a"/>Complete context, evidence, ruled out paths, and a specific ask.</label><label><input name="module-09-final-quiz-15" type="radio" value="b"/>Only severity.</label><label><input name="module-09-final-quiz-15" type="radio" value="c"/>Only an error screenshot.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>16. What should be checked before creating duplicate engineering work?</h3><label><input name="module-09-final-quiz-16" type="radio" value="a"/>Known Issues and existing defects.</label><label><input name="module-09-final-quiz-16" type="radio" value="b"/>Only dashboards.</label><label><input name="module-09-final-quiz-16" type="radio" value="c"/>Only role hierarchy.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>17. What is the purpose of swarming?</h3><label><input name="module-09-final-quiz-17" type="radio" value="a"/>Bring expertise into the investigation while maintaining clear ownership.</label><label><input name="module-09-final-quiz-17" type="radio" value="b"/>Transfer every case immediately.</label><label><input name="module-09-final-quiz-17" type="radio" value="c"/>Replace documentation.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>18. What should a strong Swarm Request contain?</h3><label><input name="module-09-final-quiz-18" type="radio" value="a"/>Customer experience, work completed, evidence, and the specific ask.</label><label><input name="module-09-final-quiz-18" type="radio" value="b"/>Only the case number.</label><label><input name="module-09-final-quiz-18" type="radio" value="c"/>Only the product name.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>19. When should a swarm be closed?</h3><label><input name="module-09-final-quiz-19" type="radio" value="a"/>When the collaboration is genuinely complete.</label><label><input name="module-09-final-quiz-19" type="radio" value="b"/>At the end of every day.</label><label><input name="module-09-final-quiz-19" type="radio" value="c"/>As soon as another engineer joins.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>20. How should “it started after the release” be treated?</h3><label><input name="module-09-final-quiz-20" type="radio" value="a"/>As a clue that must be validated.</label><label><input name="module-09-final-quiz-20" type="radio" value="b"/>As proof of regression.</label><label><input name="module-09-final-quiz-20" type="radio" value="c"/>As irrelevant.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>21. What helps prove a release regression?</h3><label><input name="module-09-final-quiz-21" type="radio" value="a"/>A comparison showing changed behavior between versions under equivalent conditions.</label><label><input name="module-09-final-quiz-21" type="radio" value="b"/>The word regression in the case.</label><label><input name="module-09-final-quiz-21" type="radio" value="c"/>One screenshot.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>22. What should the final case story include?</h3><label><input name="module-09-final-quiz-22" type="radio" value="a"/>Problem, impact, evidence, tests, conclusion, and next action.</label><label><input name="module-09-final-quiz-22" type="radio" value="b"/>Only the final answer.</label><label><input name="module-09-final-quiz-22" type="radio" value="c"/>Only internal notes.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>23. Why review recent changes and timelines?</h3><label><input name="module-09-final-quiz-23" type="radio" value="a"/>To test whether a change could explain the symptom.</label><label><input name="module-09-final-quiz-23" type="radio" value="b"/>To assign blame automatically.</label><label><input name="module-09-final-quiz-23" type="radio" value="c"/>To update a page layout.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>24. Should a nearby change be treated as root cause immediately?</h3><label><input name="module-09-final-quiz-24" type="radio" value="a"/>No, it must be validated against the symptom.</label><label><input name="module-09-final-quiz-24" type="radio" value="b"/>Yes, always.</label><label><input name="module-09-final-quiz-24" type="radio" value="c"/>Only if it involved Flow.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div><div class="quiz-question"><h3>25. What is the overall Module 09 mindset?</h3><label><input name="module-09-final-quiz-25" type="radio" value="a"/>Build a repeatable evidence based story from scope to next action.</label><label><input name="module-09-final-quiz-25" type="radio" value="b"/>Use the most advanced tool first.</label><label><input name="module-09-final-quiz-25" type="radio" value="c"/>Escalate before reproduction.</label><button class="quiz-button generic-quiz-button" data-answer="a" data-success="✓ Correct. This follows the structured investigation method in Module 09.">Check answer</button><p aria-live="polite" class="quiz-feedback"></p></div></div><div class="module-final-completion" data-module-final-completion="09">Answer all 25 questions to see your final Module 09 score.</div><div class="section-nav"><button class="section-nav-btn prev" data-go="structured-investigation" data-subtarget="final-checklist">← Previous: Final Investigation Checklist</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-library-guide">Next: Real Case Library →</button></div></article></section>
 <section class="section training-section" id="real-cases">
 <div class="section-number">10</div>
 <div class="module-title-row">
 <div>
 <h2>Real Case Library</h2>
-<p class="section-intro">This will be the final section of the guide. It will be built later from real case material.</p>
+<p class="section-intro">Practice how a Success Engineer moves from case intake to investigation, trusted guidance, customer communication, and follow-up using realistic case material.</p>
 </div>
-<span class="module-status-badge pending">COMING LATER</span>
+<span class="module-status-badge">CASE LIBRARY ACTIVE</span>
 </div>
-<div class="real-case-placeholder">
-<div class="case-placeholder-icon">⌛</div>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-library-guide">
+<div class="case-library-hero">
 <div>
-<span class="mini-eyebrow">RESERVED FINAL MODULE</span>
-<h3>Real customer cases will live here.</h3>
-<p>When we build this section, each case can follow a consistent path such as Issue → Context → Scope → Investigation → Evidence → Tools → Root Cause → Resolution → Communication → Takeaways.</p>
+<span class="topic-index">REAL CASE LIBRARY · GUIDE</span>
+<h3>Work the case before you try to solve it</h3>
+<p>A real case is not only a technical problem. First collect the context, open the full record, understand what the customer is asking, and then choose the simplest evidence source that can move the investigation forward.</p>
 </div>
+<div class="case-library-hero-badge"><strong>5</strong><span>practical steps</span></div>
 </div>
+
+<div class="case-principle dark">
+<span class="mini-eyebrow">CORE HABIT</span>
+<h4>When you are not sure what to do next, do not guess.</h4>
+<p>Review the case context and use the <strong>Knowledge</strong> area to search for trusted guidance related to the Product &amp; Topic, feature, symptom, or error. Validate that the article fits the customer's scenario, share the relevant steps and source, then wait for the customer to confirm whether the guidance resolved the issue.</p>
+</div>
+
+<div class="case-workflow">
+<article class="case-workflow-step">
+<div class="case-workflow-copy"><span class="case-step-number">01</span><div><span class="mini-eyebrow">INTAKE</span><h4>Read the case overview</h4><p>The Slack case card gives quick context such as case number, owner, account, Product &amp; Topic, and Success Plan. Use it to understand what landed in your queue before opening the full record.</p></div></div>
+<figure class="case-library-figure case-library-figure-medium"><img alt="Case overview card in Slack showing case number, owner, account, Product and Topic, and Success Plan." src="images/m10-case-slack-overview.png"/><figcaption>Start with the summary, then move into Salesforce for the full investigation context.</figcaption></figure>
+</article>
+
+<article class="case-workflow-step reverse">
+<div class="case-workflow-copy"><span class="case-step-number">02</span><div><span class="mini-eyebrow">OPEN</span><h4>Open the record in Salesforce</h4><p>Use the case card menu and open the case in Salesforce when you need the complete feed, details, related records, support tools, and investigation workspace.</p></div></div>
+<figure class="case-library-figure case-library-figure-small"><img alt="Case card menu showing the Open in Salesforce action." src="images/m10-open-in-salesforce.png"/><figcaption>The Slack card is the entry point; Salesforce is where the case is worked.</figcaption></figure>
+</article>
+
+<article class="case-workflow-step">
+<div class="case-workflow-copy"><span class="case-step-number">03</span><div><span class="mini-eyebrow">INVESTIGATE</span><h4>Use Salesforce as the investigation hub</h4><p>Review the case feed and details, then use the tools around the case. In this example, the <strong>Knowledge</strong> tab appears on the right side of the console and provides a direct place to search for articles that may explain the recommended resolution.</p><div class="case-inline-note"><strong>Knowledge search idea</strong><span>Search with the feature name, Product &amp; Topic, symptom, exact error text, and key words from the customer's description.</span></div></div></div>
+<figure class="case-library-figure case-library-figure-wide"><img alt="Salesforce Support Console case view with the Knowledge panel visible on the right side." src="images/m10-case-salesforce-overview.png"/><figcaption>The case record, feed, Product &amp; Topic, and Knowledge panel can all contribute to the investigation.</figcaption></figure>
+</article>
+
+<div class="case-method-strip">
+<article><span>1</span><strong>Understand</strong><p>What is the customer asking?</p></article><i>→</i><article><span>2</span><strong>Search</strong><p>What trusted guidance already exists?</p></article><i>→</i><article><span>3</span><strong>Validate</strong><p>Does it match this exact scenario?</p></article><i>→</i><article><span>4</span><strong>Respond</strong><p>Give steps, context, and the source.</p></article><i>→</i><article><span>5</span><strong>Follow up</strong><p>Wait for validation and continue if needed.</p></article>
+</div>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="structured-investigation" data-subtarget="module-09-final">← Previous: Module 09 Final Quiz</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-web-to-case-spam">Next: Case 01 →</button></div>
+</article>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-web-to-case-spam">
+<div class="case-study-header">
+<div>
+<span class="topic-index">CASE 01 · SERVICE CLOUD</span>
+<h3>Preventing spam through Web-to-Case</h3>
+<p>A customer is receiving a growing volume of spam Cases through a public Web-to-Case form and wants a Salesforce-native way to reduce automated submissions without blocking legitimate customers.</p>
+<div class="case-tags"><span>Web-to-Case</span><span>Knowledge</span><span>Spam prevention</span><span>Service Cloud</span></div>
+</div>
+<div class="case-number-card" data-orgcs-tip="You can also review this case and follow its development directly in OrgCS." tabindex="0"><span>CASE</span><strong>474455749</strong><small>Level 3 · High</small></div>
+</div>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>01</span><div><small>CASE SNAPSHOT</small><h4>Capture the context before recommending a fix</h4></div></div>
+<div class="case-snapshot-grid">
+<article><span>Account</span><strong>Standard Dummy Account (MAIN)</strong></article>
+<article><span>Case Owner</span><strong>Kristina Martinez</strong></article>
+<article><span>Success Plan</span><strong>Standard</strong></article>
+<article><span>Product &amp; Topic</span><strong>Service-Cases, Knowledge, Service Cloud Console, Work.com</strong></article>
+<article><span>Product Feature</span><strong>Case Management · Web-to-Case</strong></article>
+<article><span>Severity</span><strong>Level 3 · High</strong></article>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>02</span><div><small>UNDERSTAND THE ASK</small><h4>Separate the customer problem from the proposed solution</h4></div></div>
+<div class="case-problem-layout">
+<div class="case-problem-copy">
+<span class="mini-eyebrow">CUSTOMER REQUEST</span>
+<h4>Spam Cases are being created through a public Web-to-Case form</h4>
+<p>The form still creates legitimate Cases correctly and the customer is not reporting a specific Salesforce error. The operational problem is the time agents spend reviewing and closing automated spam submissions.</p>
+<div class="case-question-list"><div><span>01</span><p><strong>Subject:</strong> Recommendations for preventing spam through Web-to-Case</p></div><div><span>02</span><p><strong>Expected outcome:</strong> Reduce automated spam while keeping legitimate customer submissions working.</p></div><div><span>03</span><p><strong>Evidence to look for:</strong> The current Web-to-Case setup, generated form implementation, spam-filtering/reCAPTCHA configuration, and any relevant Knowledge guidance.</p></div></div>
+</div>
+<figure class="case-library-figure case-description-figure"><img alt="Case subject and description explaining spam Cases created through a public Web-to-Case form." src="images/m10-case01-description.png"/><figcaption>Useful case descriptions make the issue, expected outcome, and customer impact easier to investigate.</figcaption></figure>
+</div>
+<div class="case-quality-note"><strong>Useful case information</strong><p>Subject, Description, and Steps to Reproduce are especially valuable. They may not always be complete, so part of the engineer's job is to identify what is missing before troubleshooting deeply.</p></div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>03</span><div><small>INVESTIGATION PATH</small><h4>Use Knowledge to move from an unfamiliar case to a supported recommendation</h4></div></div>
+<div class="case-investigation-path">
+<article><span>1</span><strong>Use Product &amp; Topic</strong><p>Confirm the request belongs to Service Cloud and Web-to-Case.</p></article><i>→</i><article><span>2</span><strong>Search Knowledge</strong><p>Look for Web-to-Case spam, spam filtering, and reCAPTCHA guidance.</p></article><i>→</i><article><span>3</span><strong>Validate applicability</strong><p>Make sure the article matches the customer's current setup and objective.</p></article><i>→</i><article><span>4</span><strong>Build the response</strong><p>Translate the article into clear customer steps and attach or link the source.</p></article>
+</div>
+<div class="case-principle">
+<span class="mini-eyebrow">IMPORTANT</span>
+<h4>Do not send only a Knowledge link.</h4>
+<p>Give the customer the recommended next steps in the response, explain why they apply, and include the Knowledge article so the customer has the full source and setup details.</p>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>04</span><div><small>CUSTOMER RESPONSE</small><h4>Make the answer actionable and easy to validate</h4></div></div>
+<div class="case-response-layout">
+<div class="case-response-copy">
+<span class="mini-eyebrow">RECOMMENDED FIRST STEP</span>
+<h4>Enable the Web-to-Case spam protection / reCAPTCHA path described in the relevant Knowledge guidance</h4>
+<ol class="case-response-steps"><li>Go to <strong>Setup → Web-to-Case</strong>.</li><li>Enable the recommended spam-filtering option for the Web-to-Case setup.</li><li>Configure the <strong>reCAPTCHA API Key Pair</strong> required by the form.</li><li>Confirm the website's Web-to-Case form includes the generated reCAPTCHA verification snippet.</li></ol>
+<div class="case-knowledge-chip"><span>▤</span><div><small>KNOWLEDGE ARTICLE REFERENCED</small><strong>Prevent Spam Cases with reCAPTCHA</strong><p>Attach or link the article in the customer response so the complete setup guidance is available.</p></div></div>
+</div>
+<figure class="case-library-figure case-response-figure"><img alt="Example of a strong customer response recommending reCAPTCHA for Web-to-Case and providing steps and a Knowledge article." src="images/m10-case01-response.png"/><figcaption>A strong response gives the recommendation, concrete steps, supporting Knowledge, and a clear path for follow-up.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>05</span><div><small>WHY THIS RESPONSE WORKS</small><h4>Turn the technical answer into a good support experience</h4></div></div>
+<div class="case-response-quality">
+<article><span>✓</span><strong>Acknowledges the problem</strong><p>The customer knows their request was understood before receiving instructions.</p></article>
+<article><span>✓</span><strong>Gives a direct recommendation</strong><p>The next action is explicit instead of leaving the customer to interpret a generic article.</p></article>
+<article><span>✓</span><strong>Provides steps</strong><p>The customer can immediately begin validating the proposed solution.</p></article>
+<article><span>✓</span><strong>Includes trusted source material</strong><p>The Knowledge article gives the customer the complete reference behind the recommendation.</p></article>
+<article><span>✓</span><strong>Sets the follow-up expectation</strong><p>The engineer waits for the customer's validation and continues the investigation if the first path does not resolve the issue.</p></article>
+</div>
+<div class="case-next-step"><span class="case-next-icon">→</span><div><span class="mini-eyebrow">NEXT ACTION</span><h4>Wait for the customer to test the guidance</h4><p>If the customer confirms the recommendation resolved the issue, document the outcome and close through the normal case process. If spam still gets through, continue with the implementation details and additional evidence rather than repeating the same recommendation.</p></div></div>
+</section>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="real-cases" data-subtarget="case-library-guide">← Previous: Case Library Guide</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-appexchange-package">Next: Case 02 →</button></div>
+</article>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-appexchange-package">
+<div class="case-study-header">
+<div>
+<span class="topic-index">CASE 02 · APPEXCHANGE / THIRD PARTY</span>
+<h3>Installed AppExchange package stopped generating documents</h3>
+<p>A customer relies on a third-party AppExchange package to generate PDF confirmation letters from Case records. The package-specific action now fails while standard Salesforce Case functionality continues to work.</p>
+<div class="case-tags"><span>AppExchange</span><span>Third-party package</span><span>Support boundaries</span><span>Customer guidance</span></div>
+</div>
+<div class="case-number-card" data-orgcs-tip="You can also review this case and follow its development directly in OrgCS." tabindex="0"><span>CASE</span><strong>474455804</strong><small>Level 4 · Medium</small></div>
+</div>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>01</span><div><small>CASE SNAPSHOT</small><h4>Identify what is failing and what is still working</h4></div></div>
+<div class="case-snapshot-grid">
+<article><span>Case Owner</span><strong>Kristina Martinez</strong></article>
+<article><span>Status</span><strong>Closed</strong></article>
+<article><span>Success Plan</span><strong>Standard</strong></article>
+<article><span>Product &amp; Topic</span><strong>Service-AppExchange, AgentExchange &amp; Managed Packages</strong></article>
+<article><span>Product Feature</span><strong>Managed Packaging · Other</strong></article>
+<article><span>Severity</span><strong>Level 4 · Medium</strong></article>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>02</span><div><small>UNDERSTAND THE BOUNDARY</small><h4>Separate Salesforce platform behavior from package-owned behavior</h4></div></div>
+<div class="case-problem-layout">
+<div class="case-problem-copy">
+<span class="mini-eyebrow">CUSTOMER REPORT</span>
+<h4>The package action fails, but standard Case operations still work</h4>
+<p>Users can click the package's Generate Document button, but sometimes the page keeps loading and other times it returns “Document generation failed.” The customer can still create and update Cases normally.</p>
+<div class="case-question-list"><div><span>01</span><p><strong>Business impact:</strong> Support agents depend on the generated confirmation letters for customers.</p></div><div><span>02</span><p><strong>Recent context:</strong> No intentional package configuration change was reported, but several user permissions were recently updated.</p></div><div><span>03</span><p><strong>Boundary clue:</strong> The failure appears limited to the installed package instead of standard Salesforce Case functionality.</p></div></div>
+</div>
+<figure class="case-library-figure case-description-figure"><img alt="Case description for an installed AppExchange package that stopped generating documents while standard Salesforce Case functionality continued to work." src="images/m10-case02-description.png"/><figcaption>The description gives an important support boundary: package-specific document generation is failing, while standard Case behavior remains available.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>03</span><div><small>INVESTIGATION PATH</small><h4>Do not stop at “third party”; help the customer reach the right next step</h4></div></div>
+<div class="case-investigation-path case-investigation-path-five">
+<article><span>1</span><strong>Confirm scope</strong><p>Verify the symptom is limited to the installed package and record what still works in Salesforce.</p></article><i>→</i><article><span>2</span><strong>Check recent changes</strong><p>Use the reported permission updates as a clue to validate, not as a proven root cause.</p></article><i>→</i><article><span>3</span><strong>Research support guidance</strong><p>Find the relevant Salesforce guidance for third-party apps, installed packages, and support ownership.</p></article><i>→</i><article><span>4</span><strong>Give a supported path</strong><p>Explain what Salesforce can validate and where package-specific investigation needs the vendor.</p></article><i>→</i><article><span>5</span><strong>Enable the handoff</strong><p>Point the customer to the package's AppExchange resources or vendor support channel with useful context.</p></article>
+</div>
+<div class="case-principle dark">
+<span class="mini-eyebrow">CUSTOMER EXPERIENCE PRINCIPLE</span>
+<h4>A support boundary should not feel like abandonment.</h4>
+<p>If the issue is owned by a third-party package, explain the boundary clearly, share the relevant Salesforce documentation, and help the customer identify the external support path. Where possible, provide the context they should take to the vendor so they are not forced to restart the investigation from zero.</p>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>04</span><div><small>CUSTOMER RESPONSE</small><h4>Turn an ownership boundary into a guided handoff</h4></div></div>
+<div class="case-response-layout">
+<div class="case-response-copy">
+<span class="mini-eyebrow">BETTER RESPONSE STRUCTURE</span>
+<h4>Explain what was established, what Salesforce can help with, and who owns the next technical layer</h4>
+<ol class="case-response-steps"><li>Acknowledge the business impact and summarize the package-specific symptom.</li><li>Explain that standard Salesforce Case functionality appears healthy based on the information provided.</li><li>Share the Salesforce guidance that defines support for third-party apps and installed packages.</li><li>Direct the customer to the package's AppExchange Resources / vendor support contact for package-specific troubleshooting.</li><li>Include the evidence already collected, such as the error text, affected users, recent permission changes, and timestamps, so the external team has a useful starting point.</li></ol>
+<div class="case-knowledge-chip"><span>↗</span><div><small>GUIDED HANDOFF</small><strong>Do more than provide a link</strong><p>The goal is to leave the customer with a clear owner, a clear next action, and the investigation context needed to continue efficiently.</p></div></div>
+</div>
+<figure class="case-library-figure case-response-figure"><img alt="Example internal response that references Salesforce documentation for third-party applications and directs the customer to the package support team." src="images/m10-case02-response.png"/><figcaption>The original response establishes the support boundary. The stronger habit is to pair that boundary with concrete guidance and a useful handoff.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>05</span><div><small>WHY THIS MATTERS</small><h4>Keep ownership clear without making the customer feel dismissed</h4></div></div>
+<div class="case-response-quality">
+<article><span>✓</span><strong>Defines the boundary</strong><p>The engineer distinguishes package behavior from standard Salesforce functionality.</p></article>
+<article><span>✓</span><strong>Uses evidence</strong><p>The conclusion is based on what is failing and what continues to work.</p></article>
+<article><span>✓</span><strong>Provides trusted guidance</strong><p>Salesforce documentation explains the support model instead of relying on a vague statement.</p></article>
+<article><span>✓</span><strong>Guides the customer outward</strong><p>The customer is shown where to find the package-specific support team.</p></article>
+<article><span>✓</span><strong>Preserves momentum</strong><p>Useful context can travel with the customer so the next team can continue instead of restarting.</p></article>
+</div>
+<div class="case-next-step"><span class="case-next-icon">→</span><div><span class="mini-eyebrow">NEXT ACTION</span><h4>Help the customer leave with a path, not a dead end</h4><p>If package-specific debugging is required, make the vendor handoff actionable. If new evidence shows the failure also affects standard Salesforce behavior, reassess the boundary and continue the Salesforce investigation.</p></div></div>
+</section>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="real-cases" data-subtarget="case-web-to-case-spam">← Previous: Case 01</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-intermittent-save">Next: Case 03 →</button></div>
+</article>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-intermittent-save">
+<div class="case-study-header">
+<div>
+<span class="topic-index">CASE 03 · SERVICE CLOUD</span>
+<h3>Cases intermittently fail to save</h3>
+<p>Support agents occasionally cannot save Case updates. The behavior is inconsistent, affects different users at different times, and cannot be reproduced reliably by the Salesforce administrator.</p>
+<div class="case-tags"><span>Intermittent issue</span><span>Evidence collection</span><span>Reproduction</span><span>Case Management</span></div>
+</div>
+<div class="case-number-card" data-orgcs-tip="You can also review this case and follow its development directly in OrgCS." tabindex="0"><span>CASE</span><strong>474455620</strong><small>Level 4 · Medium</small></div>
+</div>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>01</span><div><small>CASE SNAPSHOT</small><h4>Start from the full console context</h4></div></div>
+<div class="case-snapshot-grid">
+<article><span>Case Owner</span><strong>Kristina Martinez</strong></article>
+<article><span>Status</span><strong>Closed</strong></article>
+<article><span>Success Plan</span><strong>Standard</strong></article>
+<article><span>Product &amp; Topic</span><strong>Service-Cases, Knowledge, Service Cloud Console, Work.com</strong></article>
+<article><span>Product Feature</span><strong>Case Management · Cases / Assets</strong></article>
+<article><span>Severity</span><strong>Level 4 · Medium</strong></article>
+</div>
+
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>02</span><div><small>UNDERSTAND THE SYMPTOM</small><h4>Intermittent behavior changes the investigation strategy</h4></div></div>
+<div class="case-problem-layout">
+<div class="case-problem-copy">
+<span class="mini-eyebrow">CUSTOMER REPORT</span>
+<h4>Save failures happen occasionally and cannot be reproduced on demand</h4>
+<p>Agents sometimes click Save and the page either continues loading or returns an error. Retrying later usually works. The issue affects different agents during the day, while the Salesforce administrator could not reproduce it on the same records.</p>
+<div class="case-question-list"><div><span>01</span><p><strong>Frequency:</strong> Intermittent, not every save attempt.</p></div><div><span>02</span><p><strong>Population:</strong> Different support agents are affected.</p></div><div><span>03</span><p><strong>Impact:</strong> Agents sometimes have to re-enter Case notes, increasing response time.</p></div></div>
+</div>
+<figure class="case-library-figure case-description-figure"><img alt="Case description explaining intermittent save failures for Case updates across different support agents." src="images/m10-case03-description.png"/><figcaption>For intermittent cases, the description should be converted into a list of precise variables that can be compared across failing and working attempts.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>03</span><div><small>EVIDENCE FIRST</small><h4>Collect the details that make an intermittent issue investigable</h4></div></div>
+<div class="case-investigation-path case-investigation-path-five">
+<article><span>1</span><strong>Affected user</strong><p>Record exactly who experienced the failure and compare affected versus unaffected users.</p></article><i>→</i><article><span>2</span><strong>Date, time &amp; timezone</strong><p>Capture the exact occurrence window so logs and related activity can be correlated.</p></article><i>→</i><article><span>3</span><strong>Error evidence</strong><p>Get the exact message or a screenshot instead of relying on a general description.</p></article><i>→</i><article><span>4</span><strong>Record &amp; click path</strong><p>Collect affected record links and the exact actions taken before the failure.</p></article><i>→</i><article><span>5</span><strong>Look for a pattern</strong><p>Compare users, times, records, actions, and successful retries before proposing a cause.</p></article>
+</div>
+<div class="case-principle">
+<span class="mini-eyebrow">INVESTIGATION HABIT</span>
+<h4>Do not guess the root cause because the issue is intermittent.</h4>
+<p>The first objective is to create a reproducible evidence set. Exact timestamps, users, records, errors, and click paths make it possible to correlate the failure with logs, automation, configuration, or other system behavior later.</p>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>04</span><div><small>FIRST RESPONSE</small><h4>Ask for evidence without making the customer do the investigation for you</h4></div></div>
+<div class="case-response-layout">
+<div class="case-response-copy">
+<span class="mini-eyebrow">USEFUL INFORMATION TO REQUEST</span>
+<h4>Turn the customer's next occurrence into data you can investigate</h4>
+<ol class="case-response-steps"><li>Affected user's name.</li><li>Exact date and time of the failure, including timezone.</li><li>Exact error message or a screenshot of the behavior.</li><li>Links to the affected Case records or application area.</li><li>The exact actions or click path that led to the failure.</li><li>Whether the problem appears tied to specific users, times, records, or repeatable conditions.</li></ol>
+<div class="case-knowledge-chip"><span>◎</span><div><small>ENGINEER OWNERSHIP</small><strong>Ask for the minimum evidence that unlocks the next investigation step</strong><p>The customer supplies observations only they can see; the engineer remains responsible for analyzing the evidence, correlating it, and deciding what to test next.</p></div></div>
+</div>
+<figure class="case-library-figure case-response-figure"><img alt="Example Success Engineer response requesting affected user, exact timestamp, error message, affected records, and precise reproduction steps for an intermittent Case save failure." src="images/m10-case03-response.png"/><figcaption>The response is effective because every requested detail can be used to narrow scope, reproduce the issue, or correlate evidence.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>05</span><div><small>WHY THIS RESPONSE WORKS</small><h4>Convert an inconsistent symptom into a structured investigation</h4></div></div>
+<div class="case-response-quality">
+<article><span>✓</span><strong>Captures exact timing</strong><p>Timestamps and timezone create a usable search window for technical evidence.</p></article>
+<article><span>✓</span><strong>Identifies affected context</strong><p>User and record details make working-versus-failing comparisons possible.</p></article>
+<article><span>✓</span><strong>Preserves the real error</strong><p>Exact messages and screenshots reduce ambiguity.</p></article>
+<article><span>✓</span><strong>Builds reproduction detail</strong><p>The click path can reveal the point where the behavior diverges.</p></article>
+<article><span>✓</span><strong>Avoids premature conclusions</strong><p>The engineer collects evidence before deciding which technical layer to troubleshoot.</p></article>
+</div>
+<div class="case-next-step"><span class="case-next-icon">→</span><div><span class="mini-eyebrow">NEXT ACTION</span><h4>Correlate the next failure instead of waiting for a perfect reproduction</h4><p>When the customer provides a new occurrence, use the timestamp, user, record, error, and click path to compare the failing attempt with successful attempts and select the next diagnostic tool.</p></div></div>
+</section>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="real-cases" data-subtarget="case-appexchange-package">← Previous: Case 02</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-printable-view-knowledge">Next: Case 04 →</button></div>
+</article>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-printable-view-knowledge">
+<div class="case-study-header">
+<div>
+<span class="topic-index">CASE 04 · KNOWLEDGE</span>
+<h3>Printable View action missing in Lightning Knowledge</h3>
+<p>A Knowledge team wants to print Lightning Knowledge articles for internal review meetings, but the Printable View action does not appear even after it is added to the Lightning page layout actions.</p>
+<div class="case-tags"><span>Knowledge</span><span>Lightning Experience</span><span>Product limitation</span><span>Workaround guidance</span></div>
+</div>
+<div class="case-number-card" data-orgcs-tip="You can also review this case and follow its development directly in OrgCS." tabindex="0"><span>CASE</span><strong>474455928</strong><small>Level 4 · Medium</small></div>
+</div>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>01</span><div><small>CASE SNAPSHOT</small><h4>Confirm the exact object, action, and behavior being tested</h4></div></div>
+<div class="case-snapshot-grid">
+<article><span>Case Owner</span><strong>Kristina Martinez</strong></article>
+<article><span>Status</span><strong>Closed</strong></article>
+<article><span>Success Plan</span><strong>Standard</strong></article>
+<article><span>Product &amp; Topic</span><strong>Service-Cases, Knowledge, Service Cloud Console, Work.com</strong></article>
+<article><span>Product Feature</span><strong>Knowledge-Article Management</strong></article>
+<article><span>Severity</span><strong>Level 4 · Medium</strong></article>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>02</span><div><small>UNDERSTAND THE ASK</small><h4>The action was configured correctly, but it still does not appear</h4></div></div>
+<div class="case-problem-layout">
+<div class="case-problem-copy">
+<span class="mini-eyebrow">CUSTOMER REPORT</span>
+<h4>Printable View is missing on Lightning Knowledge articles</h4>
+<p>The customer already added the <strong>Printable View</strong> action to the page layout under Salesforce Mobile and Lightning Experience Actions. The same behavior was reproduced as a system administrator, while other Knowledge actions still appear normally.</p>
+<div class="case-question-list"><div><span>01</span><p><strong>Object in scope:</strong> Lightning Knowledge article records in Lightning Experience.</p></div><div><span>02</span><p><strong>What was tested:</strong> Page layout action placement and admin-level validation.</p></div><div><span>03</span><p><strong>Customer ask:</strong> Determine whether another setting or permission is required.</p></div></div>
+</div>
+<figure class="case-library-figure case-description-figure"><img alt="Case subject and description explaining that the Printable View action was added to Lightning Knowledge but does not appear on article records." src="images/m10-case04-description.png"/><figcaption>The case already contains valuable evidence: what object is involved, what was configured, and the fact that the behavior persists even for a system administrator.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>03</span><div><small>INVESTIGATION PATH</small><h4>Validate whether this is a setup issue or a supported-platform boundary</h4></div></div>
+<div class="case-investigation-path">
+<article><span>1</span><strong>Confirm the object</strong><p>Make sure the missing action is being tested on Lightning Knowledge article records, not on another supported object.</p></article><i>→</i><article><span>2</span><strong>Validate the setup</strong><p>Confirm the action was added to the correct Lightning actions area and that the test was repeated with sufficient access.</p></article><i>→</i><article><span>3</span><strong>Check official support scope</strong><p>Review Salesforce guidance for Printable View support in Lightning Experience.</p></article><i>→</i><article><span>4</span><strong>Guide the customer forward</strong><p>Explain the limitation clearly and offer practical alternatives for printing article content.</p></article>
+</div>
+<div class="case-principle">
+<span class="mini-eyebrow">IMPORTANT</span>
+<h4>A well-tested configuration can still fail because the feature is not supported in that context.</h4>
+<p>When the customer's setup is correct, the next step is to verify product scope. That prevents unnecessary permission changes and lets the engineer move quickly into workarounds or design alternatives.</p>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>04</span><div><small>CUSTOMER RESPONSE</small><h4>Confirm the limitation and give workable alternatives</h4></div></div>
+<div class="case-response-layout">
+<div class="case-response-copy">
+<span class="mini-eyebrow">RECOMMENDED RESPONSE SHAPE</span>
+<h4>Explain that this is a support boundary, then offer next-step options</h4>
+<ol class="case-response-steps"><li>Confirm the customer's configuration and testing were valid.</li><li>Explain that <strong>Printable View</strong> in Lightning Experience is supported only for certain standard and custom objects, and Lightning Knowledge articles are not part of that supported scope.</li><li>Clarify that no missing permission or hidden setting is blocking the action in this scenario.</li><li>Recommend interim options such as the browser's print / save-as-PDF capability directly from the article page.</li><li>If the customer needs a repeatable internal format, suggest a custom Visualforce or Lightning Web Component print-friendly solution.</li></ol>
+<div class="case-knowledge-chip"><span>◎</span><div><small>WHY THIS HELPS</small><strong>It closes the configuration question and keeps the customer moving</strong><p>The response does more than say no. It confirms what was validated, explains the platform limitation, and leaves the customer with realistic workaround paths.</p></div></div>
+</div>
+<figure class="case-library-figure case-response-figure"><img alt="Example internal response explaining that Printable View is not supported for Lightning Knowledge articles and proposing workaround options." src="images/m10-case04-response.png"/><figcaption>The strongest answer removes ambiguity, names the product limitation, and still offers practical options the customer can act on.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>05</span><div><small>WHY THIS RESPONSE WORKS</small><h4>Separate unsupported behavior from misconfiguration</h4></div></div>
+<div class="case-response-quality">
+<article><span>✓</span><strong>Uses the evidence provided</strong><p>The engineer builds on what the customer already tested instead of restarting from zero.</p></article>
+<article><span>✓</span><strong>Clarifies the boundary</strong><p>The response explains that this is a product-scope limitation, not a missing permission.</p></article>
+<article><span>✓</span><strong>Avoids trial-and-error changes</strong><p>It prevents unnecessary troubleshooting on actions, profiles, or layouts that will not change the outcome.</p></article>
+<article><span>✓</span><strong>Offers workarounds</strong><p>Browser printing and custom print-friendly rendering give the customer concrete paths forward.</p></article>
+<article><span>✓</span><strong>Preserves trust</strong><p>The customer receives a clear explanation and next steps instead of an unexplained dead end.</p></article>
+</div>
+<div class="case-next-step"><span class="case-next-icon">→</span><div><span class="mini-eyebrow">NEXT ACTION</span><h4>Turn the limitation into a design decision</h4><p>If printing remains a business need, help the customer evaluate whether the browser print flow is sufficient or whether a custom print-friendly article experience is worth building.</p></div></div>
+</section>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="real-cases" data-subtarget="case-intermittent-save">← Previous: Case 03</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-api-request-consumption">Next: Case 05 →</button></div>
+</article>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-api-request-consumption">
+<div class="case-study-header">
+<div>
+<span class="topic-index">CASE 05 · DEVELOPER SUPPORT</span>
+<h3>Clarifying Daily API Request consumption</h3>
+<p>A customer wants to understand what contributes to the Daily API Requests limit and identify the integration, application, user, or operation driving the highest API consumption in the org.</p>
+<div class="case-tags"><span>API usage</span><span>Limits</span><span>Integrations</span><span>Optimization</span></div>
+</div>
+<div class="case-number-card" data-orgcs-tip="You can also review this case and follow its development directly in OrgCS." tabindex="0"><span>CASE</span><strong>474455514</strong><small>Level 4 · Medium</small></div>
+</div>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>01</span><div><small>CASE SNAPSHOT</small><h4>Frame the question before jumping into usage data</h4></div></div>
+<div class="case-snapshot-grid">
+<article><span>Case Owner</span><strong>Kristina Martinez</strong></article>
+<article><span>Status</span><strong>Closed</strong></article>
+<article><span>Success Plan</span><strong>Standard</strong></article>
+<article><span>Product &amp; Topic</span><strong>Service-Developer Support</strong></article>
+<article><span>Product Feature</span><strong>Limit Changes · Bulk API</strong></article>
+<article><span>Severity</span><strong>Level 4 · Medium</strong></article>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>02</span><div><small>UNDERSTAND THE ASK</small><h4>The customer needs both attribution and optimization guidance</h4></div></div>
+<div class="case-problem-layout">
+<div class="case-problem-copy">
+<span class="mini-eyebrow">CUSTOMER REQUEST</span>
+<h4>Which operations count, and who is using most of the API limit?</h4>
+<p>The customer wants to understand what contributes to the Daily API Requests limit and how to identify the main consumer so the team can evaluate possible optimizations before the org approaches the daily threshold.</p>
+<div class="case-question-list"><div><span>01</span><p><strong>Learning goal:</strong> Clarify which API activity contributes to the daily limit.</p></div><div><span>02</span><p><strong>Investigation goal:</strong> Identify the user, connected app, client, or operation responsible for the majority of usage.</p></div><div><span>03</span><p><strong>Outcome needed:</strong> Find the source and recommend ways to reduce unnecessary consumption.</p></div></div>
+</div>
+<figure class="case-library-figure case-description-figure"><img alt="Case description asking which operations count toward Daily API Requests and how to identify the main source of API consumption." src="images/m10-case05-description.png"/><figcaption>This case is not only about the limit value. The engineer must explain what counts and show the customer where to inspect the top consumers.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>03</span><div><small>INVESTIGATION PATH</small><h4>Point the customer to the right usage views before proposing optimizations</h4></div></div>
+<div class="case-investigation-path case-investigation-path-five">
+<article><span>1</span><strong>Check System Overview</strong><p>Use <strong>Setup → System Overview</strong> to understand the current Daily API Requests usage against the org limit.</p></article><i>→</i><article><span>2</span><strong>Review API Usage</strong><p>Inspect <strong>Setup → API Usage</strong> to see consumption grouped by client or connected application.</p></article><i>→</i><article><span>3</span><strong>Pull API Total Usage</strong><p>Use the free <strong>EventLogFile</strong> entry for <strong>ApiTotalUsage</strong> to analyze usage by user, client ID, and endpoint.</p></article><i>→</i><article><span>4</span><strong>Inspect OAuth usage</strong><p>Check <strong>Connected Apps → OAuth Usage</strong> to identify integrations polling or authenticating more often than necessary.</p></article><i>→</i><article><span>5</span><strong>Recommend optimizations</strong><p>Once the top source is confirmed, suggest Bulk API, Composite API, caching, or batching changes to reduce call volume.</p></article>
+</div>
+<div class="case-principle">
+<span class="mini-eyebrow">IMPORTANT</span>
+<h4>Find the top consumer before recommending changes.</h4>
+<p>The right optimization depends on the pattern. A polling integration, a chatty REST client, and a high-volume load process can all consume the limit for different reasons, so the engineer should first show the customer where attribution data lives.</p>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>04</span><div><small>CUSTOMER RESPONSE</small><h4>Give a short investigation plan plus immediate reduction ideas</h4></div></div>
+<div class="case-response-layout">
+<div class="case-response-copy">
+<span class="mini-eyebrow">PRACTICAL GUIDANCE</span>
+<h4>Use the built-in usage views, then correlate to the highest-volume source</h4>
+<ol class="case-response-steps"><li>Review <strong>Setup → System Overview</strong> for a quick snapshot of API usage versus the daily allocation.</li><li>Use <strong>Setup → API Usage</strong> to identify which connected app or client is contributing the most volume.</li><li>Pull the <strong>API Total Usage</strong> event log (<strong>EventType = ApiTotalUsage</strong>) for granular per-call detail by user, client ID, and endpoint. An Event Monitoring license is not required for this event.</li><li>Review <strong>Connected Apps → OAuth Usage</strong> to spot integrations that are polling or authenticating more frequently than needed.</li><li>After the source is identified, reduce volume with <strong>Bulk API</strong>, <strong>Composite API</strong>, caching, batching, or less frequent polling where appropriate.</li></ol>
+<div class="case-knowledge-chip"><span>◎</span><div><small>WHY THIS WORKS</small><strong>The response teaches the customer how to self-check and gives optimization direction</strong><p>It answers both parts of the question: what to review for attribution and what types of changes usually reduce API consumption once the top driver is known.</p></div></div>
+</div>
+<figure class="case-library-figure case-response-figure"><img alt="Example internal response explaining how to analyze Daily API Requests usage and identify top API consumers." src="images/m10-case05-response.png"/><figcaption>The best response is structured as an investigation path: first identify the source, then select the optimization that matches the usage pattern.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>05</span><div><small>WHY THIS RESPONSE WORKS</small><h4>It answers the limit question with both explanation and action</h4></div></div>
+<div class="case-response-quality">
+<article><span>✓</span><strong>Explains where to look</strong><p>The customer gets concrete setup paths instead of a generic suggestion to monitor the org.</p></article>
+<article><span>✓</span><strong>Improves attribution</strong><p>System Overview, API Usage, and ApiTotalUsage together narrow the highest-volume source quickly.</p></article>
+<article><span>✓</span><strong>Covers integrations</strong><p>Connected App OAuth usage helps uncover clients that are over-polling or authenticating inefficiently.</p></article>
+<article><span>✓</span><strong>Connects to optimization</strong><p>The engineer bridges the diagnosis to next-step actions such as Bulk API, Composite API, and caching.</p></article>
+<article><span>✓</span><strong>Builds customer confidence</strong><p>The customer leaves understanding both the limit mechanics and the path to reduce future consumption.</p></article>
+</div>
+<div class="case-next-step"><span class="case-next-icon">→</span><div><span class="mini-eyebrow">NEXT ACTION</span><h4>Correlate the biggest client with its usage pattern</h4><p>Once the dominant consumer is identified, review whether the integration can batch work, cache data, use a more efficient API pattern, or reduce request frequency.</p></div></div>
+</section>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="real-cases" data-subtarget="case-printable-view-knowledge">← Previous: Case 04</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-web-to-lead-access">Next: Case 06 →</button></div>
+</article>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-web-to-lead-access">
+<div class="case-study-header">
+<div>
+<span class="topic-index">CASE 06 · SALES CLOUD</span>
+<h3>Web-to-Lead failures after email template changes</h3>
+<p>A website integration that submits Leads is now failing for some requests with an <strong>insufficient access rights on cross-reference id</strong> error, and the strongest clue is that the team recently reorganized Lead email templates.</p>
+<div class="case-tags"><span>Web-to-Lead</span><span>Cross-reference access</span><span>Email templates</span><span>Lead automation</span></div>
+</div>
+<div class="case-number-card" data-orgcs-tip="You can also review this case and follow its development directly in OrgCS." tabindex="0"><span>CASE</span><strong>474465371</strong><small>Level 4 · Medium</small></div>
+</div>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>01</span><div><small>CASE SNAPSHOT</small><h4>Use the error text and recent changes to narrow the path quickly</h4></div></div>
+<div class="case-snapshot-grid">
+<article><span>Case Owner</span><strong>Kristina Martinez</strong></article>
+<article><span>Status</span><strong>Closed</strong></article>
+<article><span>Success Plan</span><strong>Standard</strong></article>
+<article><span>Product &amp; Topic</span><strong>Sales-Leads, Opportunities, Campaigns, Sales Engagement, Sales Enablement</strong></article>
+<article><span>Product Feature</span><strong>Leads-General</strong></article>
+<article><span>Severity</span><strong>Level 4 · Medium</strong></article>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>02</span><div><small>UNDERSTAND THE ASK</small><h4>The Lead insert is failing because a downstream reference may no longer be accessible</h4></div></div>
+<div class="case-problem-layout">
+<div class="case-problem-copy">
+<span class="mini-eyebrow">CUSTOMER REQUEST</span>
+<h4>Lead submissions started failing after a change around Lead communications</h4>
+<p>The customer is not asking for a general explanation of the error. They need help identifying <em>which referenced record or resource</em> the submission path can no longer access, and the recent template reorganization is a strong indicator of where to start.</p>
+<div class="case-question-list"><div><span>01</span><p><strong>Symptom:</strong> Some Lead submissions fail with <strong>insufficient access rights on cross-reference id</strong>.</p></div><div><span>02</span><p><strong>Important clue:</strong> Email templates used for Lead communication were recently reorganized.</p></div><div><span>03</span><p><strong>Likely references to inspect:</strong> Auto-response email templates and folders, flows or automation references, Campaigns, Owners, or Record Types touched after the Lead is created.</p></div></div>
+</div>
+<figure class="case-library-figure case-description-figure"><img alt="Case description explaining that website Lead submissions are failing with insufficient access rights on cross-reference id after recent template changes." src="images/m10-case06-description.png"/><figcaption>The customer already supplied the most valuable clue: something changed around the resources the post-submit automation needs to access.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>03</span><div><small>INVESTIGATION PATH</small><h4>Follow the references touched after Lead creation</h4></div></div>
+<div class="case-investigation-path case-investigation-path-five">
+<article><span>1</span><strong>Confirm the submit path</strong><p>Verify whether the website uses <strong>Web-to-Lead</strong>, a guest-user flow, or another integration user to create the Lead.</p></article><i>→</i><article><span>2</span><strong>Map post-submit actions</strong><p>Check whether an auto-response rule, flow, or other automation runs immediately after the Lead is created.</p></article><i>→</i><article><span>3</span><strong>Inspect template folder access</strong><p>Confirm the template and its folder are visible to the user, site profile, or automation context that sends the email.</p></article><i>→</i><article><span>4</span><strong>Review other references</strong><p>If folder access is fine, inspect other IDs that may be referenced, such as Campaigns, Owners, or Record Types.</p></article><i>→</i><article><span>5</span><strong>Retest with a controlled submission</strong><p>After restoring access, resubmit a Lead and verify the creation and email path both complete successfully.</p></article>
+</div>
+<div class="case-principle">
+<span class="mini-eyebrow">IMPORTANT</span>
+<h4>A cross-reference error usually points to something automation touches, not only the Lead itself.</h4>
+<p>In Lead intake scenarios, the insert may succeed up to a point and then fail when an auto-response rule, flow, or follow-up action references a record or folder the running user cannot access.</p>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>04</span><div><small>CUSTOMER RESPONSE</small><h4>Lead with the most likely cause, then keep a fallback path ready</h4></div></div>
+<div class="case-response-layout">
+<div class="case-response-copy">
+<span class="mini-eyebrow">RECOMMENDED FIRST STEP</span>
+<h4>Check the email template folder used by the Lead communication flow or auto-response rule</h4>
+<ol class="case-response-steps"><li>Identify which template is used when the Lead submission succeeds and a confirmation email is expected to send.</li><li>Open the template and the folder it now lives in, then confirm that the integration user, guest user, or site profile involved in the submission path can access it.</li><li>If the folder access looks correct, review other referenced records in the same automation path, especially Campaigns, Owners, and Record Types.</li><li>Once the missing access is restored, test again with a fresh Lead submission and confirm the Lead and the related email path both complete successfully.</li></ol>
+<div class="case-knowledge-chip"><span>◎</span><div><small>WHY THIS WORKS</small><strong>The response turns the recent-change clue into a focused investigation path</strong><p>It does not stop at naming the error. It explains why the recent template reorganization matters and gives a clear order of operations to validate the suspected access gap.</p></div></div>
+</div>
+<figure class="case-library-figure case-response-figure"><img alt="Example internal response explaining that Lead submission failures can be caused by missing access to an email template folder or another referenced resource." src="images/m10-case06-response.png"/><figcaption>The response is strong because it starts with the most likely root path, but still keeps additional reference checks ready if the template folder is not the issue.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>05</span><div><small>WHY THIS RESPONSE WORKS</small><h4>It converts a vague access error into a specific validation plan</h4></div></div>
+<div class="case-response-quality">
+<article><span>✓</span><strong>Uses the best clue</strong><p>The recent template reorganization is treated as a high-value signal instead of an unrelated detail.</p></article>
+<article><span>✓</span><strong>Targets the running context</strong><p>Folder access is checked for the actual integration or site context that submits the Lead and sends the email.</p></article>
+<article><span>✓</span><strong>Keeps alternatives open</strong><p>Campaigns, Owners, and Record Types remain in scope if the template folder turns out to be accessible.</p></article>
+<article><span>✓</span><strong>Ends with validation</strong><p>The customer is asked to retest with a controlled submission so the fix is confirmed, not assumed.</p></article>
+</div>
+<div class="case-next-step"><span class="case-next-icon">→</span><div><span class="mini-eyebrow">NEXT ACTION</span><h4>Trace the exact resource tied to the failing submission</h4><p>If folder access alone does not fix the issue, capture the exact automation path and inspect every referenced record the process touches after the Lead is created.</p></div></div>
+</section>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="real-cases" data-subtarget="case-api-request-consumption">← Previous: Case 05</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-web-to-case-file-attachments">Next: Case 07 →</button></div>
+</article>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-web-to-case-file-attachments">
+<div class="case-study-header">
+<div>
+<span class="topic-index">CASE 07 · SERVICE CLOUD</span>
+<h3>Allowing customers to attach files through Web-to-Case</h3>
+<p>A customer uses a public Web-to-Case form and wants customers to upload screenshots, PDFs, and log files when opening a Case.</p>
+<div class="case-tags"><span>Web-to-Case</span><span>File upload</span><span>Product limitation</span><span>Workarounds</span></div>
+</div>
+<div class="case-number-card" data-orgcs-tip="You can also review this case and follow its development directly in OrgCS." tabindex="0"><span>CASE</span><strong>474465301</strong><small>Level 4 · Medium</small></div>
+</div>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>01</span><div><small>CASE SNAPSHOT</small><h4>Distinguish a capability request from a broken configuration</h4></div></div>
+<div class="case-snapshot-grid">
+<article><span>Case Owner</span><strong>Kristina Martinez</strong></article>
+<article><span>Status</span><strong>Closed</strong></article>
+<article><span>Success Plan</span><strong>Standard</strong></article>
+<article><span>Product &amp; Topic</span><strong>Service-Cases, Knowledge, Service Cloud Console, Work.com</strong></article>
+<article><span>Product Feature</span><strong>Case Management · Web-to-Case</strong></article>
+<article><span>Severity</span><strong>Level 4 · Medium</strong></article>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>02</span><div><small>UNDERSTAND THE ASK</small><h4>The customer needs attachments, but standard Web-to-Case does not provide a native file input</h4></div></div>
+<div class="case-problem-layout">
+<div class="case-problem-copy">
+<span class="mini-eyebrow">CUSTOMER REQUEST</span>
+<h4>Add a standard file upload field to a Web-to-Case form</h4>
+<p>This is not a troubleshooting scenario where a field is missing due to permissions. It is a product capability question: the customer wants to know whether the standard Web-to-Case HTML generator can support attachments and, if not, what practical alternatives exist.</p>
+<div class="case-question-list"><div><span>01</span><p><strong>Business need:</strong> Let customers attach screenshots, PDFs, and logs when submitting a Case.</p></div><div><span>02</span><p><strong>Constraint:</strong> The request is specifically about the standard Web-to-Case HTML generator.</p></div><div><span>03</span><p><strong>Expected support value:</strong> Confirm the limitation and point the customer to workable alternatives.</p></div></div>
+</div>
+<figure class="case-library-figure case-description-figure"><img alt="Case description asking how to let customers attach files such as screenshots, PDFs, and log files through Web-to-Case." src="images/m10-case07-description.png"/><figcaption>The key question is not how to configure a hidden setting. It is whether standard Web-to-Case supports file input at all.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>03</span><div><small>INVESTIGATION PATH</small><h4>Confirm the limitation, then pivot quickly to viable alternatives</h4></div></div>
+<div class="case-investigation-path">
+<article><span>1</span><strong>Verify the capability boundary</strong><p>Confirm that standard Web-to-Case does not support a native file-upload field in the generated HTML form.</p></article><i>→</i><article><span>2</span><strong>Share the official guidance</strong><p>Provide the article that explains the limitation so the customer has a trusted source.</p></article><i>→</i><article><span>3</span><strong>Offer practical workarounds</strong><p>Recommend options such as Experience Cloud or a Screen Flow-based upload path tied back to the Case.</p></article><i>→</i><article><span>4</span><strong>Keep the conversation constructive</strong><p>Do not stop at "not supported". Explain which alternative best matches the customer's business need.</p></article>
+</div>
+<div class="case-principle">
+<span class="mini-eyebrow">IMPORTANT</span>
+<h4>A product limitation should still end with a useful path forward.</h4>
+<p>Customers should leave understanding both the boundary and the most realistic alternatives they can evaluate next, rather than receiving only a dead-end statement.</p>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>04</span><div><small>CUSTOMER RESPONSE</small><h4>State the limitation clearly and then bridge to workaround options</h4></div></div>
+<div class="case-response-layout">
+<div class="case-response-copy">
+<span class="mini-eyebrow">PRACTICAL GUIDANCE</span>
+<h4>Standard Web-to-Case cannot add a native file field, so the next step is choosing the best alternative</h4>
+<ol class="case-response-steps"><li>Explain that the standard <strong>Web-to-Case HTML Generator</strong> does not support a field of type <strong>File</strong>, so attachments cannot be included directly in the out-of-the-box generated form.</li><li>Share the official article describing this limitation and, if useful, the related Idea Exchange item so the customer understands this is a known product gap.</li><li>If the customer needs a native upload experience, recommend hosting the form in an <strong>Experience Cloud</strong> site where file upload can be supported more flexibly.</li><li>As another workaround, suggest a <strong>Screen Flow</strong>-based upload page that lets customers submit files and associate them with a Case after intake.</li></ol>
+<div class="case-knowledge-chip"><span>◎</span><div><small>WHY THIS WORKS</small><strong>The answer does more than confirm the limitation</strong><p>It closes the configuration question quickly, then immediately gives two workaround paths that preserve the customer's underlying goal.</p></div></div>
+</div>
+<figure class="case-library-figure case-response-figure"><img alt="Example response explaining that standard Web-to-Case does not support file attachments and offering workaround options." src="images/m10-case07-response.png"/><figcaption>The strongest limitation responses pair the boundary with concrete alternatives the customer can actually evaluate.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>05</span><div><small>WHY THIS RESPONSE WORKS</small><h4>It protects trust by replacing a dead end with options</h4></div></div>
+<div class="case-response-quality">
+<article><span>✓</span><strong>Clarifies the boundary</strong><p>The customer quickly understands the limitation belongs to standard Web-to-Case, not to a missing setting.</p></article>
+<article><span>✓</span><strong>Uses official guidance</strong><p>The article and idea link reinforce that the explanation is grounded in documented product behavior.</p></article>
+<article><span>✓</span><strong>Provides alternatives</strong><p>Experience Cloud and a Screen Flow upload path preserve the customer's file-submission requirement.</p></article>
+<article><span>✓</span><strong>Keeps the answer actionable</strong><p>The response helps the customer choose a next design direction instead of ending at “not possible.”</p></article>
+</div>
+<div class="case-next-step"><span class="case-next-icon">→</span><div><span class="mini-eyebrow">NEXT ACTION</span><h4>Choose the intake pattern that fits the business need</h4><p>If the customer wants a polished public experience, Experience Cloud may be the better path. If a lighter-weight approach is enough, a Screen Flow upload pattern may be sufficient.</p></div></div>
+</section>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="real-cases" data-subtarget="case-web-to-lead-access">← Previous: Case 06</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-omni-channel-inbox-blank">Next: Case 08 →</button></div>
+</article>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-omni-channel-inbox-blank">
+<div class="case-study-header">
+<div>
+<span class="topic-index">CASE 08 · DIGITAL ENGAGEMENT</span>
+<h3>Routed Cases not appearing in the Omni-Channel inbox</h3>
+<p>Cases appear to route successfully to agents, but the Omni-Channel inbox looks blank until the agent opens the Omni-Channel utility bar, suggesting a display or session problem rather than a routing failure.</p>
+<div class="case-tags"><span>Omni-Channel</span><span>Routing</span><span>Blank inbox</span><span>Known issue</span></div>
+</div>
+<div class="case-number-card" data-orgcs-tip="You can also review this case and follow its development directly in OrgCS." tabindex="0"><span>CASE</span><strong>474465907</strong><small>Level 4 · Medium</small></div>
+</div>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>01</span><div><small>CASE SNAPSHOT</small><h4>Separate “work is routed” from “work is visible”</h4></div></div>
+<div class="case-snapshot-grid">
+<article><span>Case Owner</span><strong>Kristina Martinez</strong></article>
+<article><span>Status</span><strong>Closed</strong></article>
+<article><span>Success Plan</span><strong>Standard</strong></article>
+<article><span>Product &amp; Topic</span><strong>Service-Digital Engagement</strong></article>
+<article><span>Product Feature</span><strong>Omni-Channel Performance</strong></article>
+<article><span>Severity</span><strong>Level 4 · Medium</strong></article>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>02</span><div><small>UNDERSTAND THE ASK</small><h4>The assignment exists, but the visual inbox experience is inconsistent</h4></div></div>
+<div class="case-problem-layout">
+<div class="case-problem-copy">
+<span class="mini-eyebrow">CUSTOMER REQUEST</span>
+<h4>Agents are not seeing assigned work in the Omni-Channel sidebar</h4>
+<p>The case description already rules out a few paths. Work appears to be routed successfully, multiple agents can reproduce the issue, and manually interacting with the Omni-Channel utility bar makes the assigned work appear. That shifts the investigation toward session state, presence, UI configuration, or a known issue.</p>
+<div class="case-question-list"><div><span>01</span><p><strong>Observed behavior:</strong> A Case is routed, but the inbox area appears blank.</p></div><div><span>02</span><p><strong>Important clue:</strong> The assigned work shows up after the agent opens or interacts with the Omni-Channel utility bar.</p></div><div><span>03</span><p><strong>High-value checks:</strong> Session/cache state, presence status, utility bar configuration, and current known issues.</p></div></div>
+</div>
+<figure class="case-library-figure case-description-figure"><img alt="Case description explaining that Omni-Channel routed work is not appearing in the agent inbox even though the work appears to be successfully assigned." src="images/m10-case08-description.png"/><figcaption>The “blank inbox but routed work exists” distinction immediately changes the investigation path.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>03</span><div><small>INVESTIGATION PATH</small><h4>Check the display context before assuming routing is broken</h4></div></div>
+<div class="case-investigation-path case-investigation-path-five">
+<article><span>1</span><strong>Hard refresh / clear cache</strong><p>Rule out a stale browser session or cached sidebar state by testing a hard refresh or incognito window.</p></article><i>→</i><article><span>2</span><strong>Scope the impact</strong><p>Confirm whether the issue affects all agents and queues or only a subset, which helps distinguish broad platform issues from localized configuration differences.</p></article><i>→</i><article><span>3</span><strong>Check presence status</strong><p>Verify the agent is truly available in Omni-Channel and not stuck in a misleading or stale presence state.</p></article><i>→</i><article><span>4</span><strong>Review utility bar setup</strong><p>Confirm the Omni-Channel utility item still has the correct Lightning app and page associations.</p></article><i>→</i><article><span>5</span><strong>Check for known issues</strong><p>Search for matching Known Issues when the symptoms line up with a display-side defect.</p></article>
+</div>
+<div class="case-principle">
+<span class="mini-eyebrow">IMPORTANT</span>
+<h4>Do not troubleshoot routing and display as though they are the same problem.</h4>
+<p>If work is assigned but not surfaced, the issue may live in the session, UI shell, or a known defect rather than in the routing rules themselves.</p>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>04</span><div><small>CUSTOMER RESPONSE</small><h4>Start with fast elimination steps and pair them with a known-issue check</h4></div></div>
+<div class="case-response-layout">
+<div class="case-response-copy">
+<span class="mini-eyebrow">PRACTICAL GUIDANCE</span>
+<h4>Verify the inbox display path before changing routing logic</h4>
+<ol class="case-response-steps"><li>Have an affected agent try a hard refresh or an incognito window to rule out a stale session or cached Omni-Channel sidebar state.</li><li>Confirm whether the issue affects all agents and all queues or only specific users, skills, or queues.</li><li>Double-check that the agent's Omni-Channel presence status is truly <strong>Available</strong> and not stuck in a stale or misleading state.</li><li>Review the <strong>Omni-Channel utility bar / sidebar setup</strong> to ensure the widget has not lost its app or page association.</li><li>Because the symptom matches a broader pattern, review the relevant <strong>Known Issue</strong> for “Omni-Channel Sidebar Inbox Is Blank” and compare the customer's behavior to the documented status or workaround.</li></ol>
+<div class="case-knowledge-chip"><span>◎</span><div><small>WHY THIS WORKS</small><strong>The response gives a quick triage ladder instead of random checks</strong><p>Each step removes a specific category: session state, scope, presence, configuration, and then product defect confirmation through a Known Issue.</p></div></div>
+</div>
+<figure class="case-library-figure case-response-figure"><img alt="Example response recommending cache, scope, presence, utility bar, and known-issue checks for an Omni-Channel blank inbox symptom." src="images/m10-case08-response.png"/><figcaption>This answer is effective because it helps the customer validate the fastest local checks while also acknowledging the possibility of a platform-side known issue.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>05</span><div><small>WHY THIS RESPONSE WORKS</small><h4>It narrows the problem with the fewest wasted steps</h4></div></div>
+<div class="case-response-quality">
+<article><span>✓</span><strong>Separates routing from display</strong><p>The investigation focuses on where the symptom actually lives instead of treating every Omni issue as a routing problem.</p></article>
+<article><span>✓</span><strong>Uses reproducible checks</strong><p>Cache, scope, and presence can be validated quickly and compared across affected and unaffected users.</p></article>
+<article><span>✓</span><strong>Considers UI configuration</strong><p>The utility bar association can explain why work exists but is not visually surfacing in the expected place.</p></article>
+<article><span>✓</span><strong>Brings in platform context</strong><p>The Known Issue path helps the customer decide whether the behavior is local or broader.</p></article>
+</div>
+<div class="case-next-step"><span class="case-next-icon">→</span><div><span class="mini-eyebrow">NEXT ACTION</span><h4>Compare the fastest elimination checks to the Known Issue pattern</h4><p>If the local checks do not resolve the behavior and the symptom matches the Known Issue, the customer can monitor the official status while avoiding unnecessary routing reconfiguration.</p></div></div>
+</section>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="real-cases" data-subtarget="case-web-to-case-file-attachments">← Previous: Case 07</button><button class="section-nav-btn next" data-go="real-cases" data-subtarget="case-kpi-report-guidance">Next: Case 09 →</button></div>
+</article>
+
+<article class="topic-section real-content-topic case-library-topic" id="case-kpi-report-guidance">
+<div class="case-study-header">
+<div>
+<span class="topic-index">CASE 09 · REPORTS &amp; DASHBOARDS</span>
+<h3>Assistance creating a Case Resolution KPI report</h3>
+<p>Support leadership wants a report that shows total closed Cases per agent, the number closed within 24 hours, and the percentage resolved within 24 hours, but the request is primarily a report-design question rather than a platform defect.</p>
+<div class="case-tags"><span>Reports</span><span>KPI design</span><span>Support boundary</span><span>How-to guidance</span></div>
+</div>
+<div class="case-number-card" data-orgcs-tip="You can also review this case and follow its development directly in OrgCS." tabindex="0"><span>CASE</span><strong>474466809</strong><small>Level 4 · Medium</small></div>
+</div>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>01</span><div><small>CASE SNAPSHOT</small><h4>Recognize when the customer needs design help more than troubleshooting</h4></div></div>
+<div class="case-snapshot-grid">
+<article><span>Case Owner</span><strong>Kristina Martinez</strong></article>
+<article><span>Status</span><strong>Closed</strong></article>
+<article><span>Success Plan</span><strong>Standard</strong></article>
+<article><span>Product &amp; Topic</span><strong>Service-Reports and Dashboards</strong></article>
+<article><span>Product Feature</span><strong>Reports-How To</strong></article>
+<article><span>Severity</span><strong>Level 4 · Medium</strong></article>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>02</span><div><small>UNDERSTAND THE ASK</small><h4>The KPI definition is clear, but the customer wants someone else to build the reporting design</h4></div></div>
+<div class="case-problem-layout">
+<div class="case-problem-copy">
+<span class="mini-eyebrow">CUSTOMER REQUEST</span>
+<h4>Create a report that measures Case closure speed per agent</h4>
+<p>The business question is valid and the desired output is specific, but this is still primarily a <strong>how-to / design</strong> request. The Success Engineer should acknowledge the need, explain the support boundary, and point the customer to the right implementation resources instead of pretending the team will build the report for them.</p>
+<div class="case-question-list"><div><span>01</span><p><strong>Metric needed:</strong> Total closed Cases, Cases closed within 24 hours, and percentage resolved within 24 hours by agent.</p></div><div><span>02</span><p><strong>Likely building blocks:</strong> A Cases report grouped by owner plus logic that identifies records closed within 24 hours.</p></div><div><span>03</span><p><strong>Support boundary:</strong> Hands-on report and formula design is different from troubleshooting a report error or platform defect.</p></div></div>
+</div>
+<figure class="case-library-figure case-description-figure"><img alt="Case description asking for help creating a Case Resolution KPI report that includes total closed Cases and the percentage closed within 24 hours." src="images/m10-case09-description.png"/><figcaption>The request is concrete, but it is still a design-and-build ask rather than a break/fix issue.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>03</span><div><small>INVESTIGATION PATH</small><h4>Give orientation without overcommitting to custom report design work</h4></div></div>
+<div class="case-investigation-path">
+<article><span>1</span><strong>Confirm the desired KPI</strong><p>Restate the exact columns and calculation the customer wants so the reporting goal is unambiguous.</p></article><i>→</i><article><span>2</span><strong>Distinguish design from break/fix</strong><p>Identify that the ask is about building a custom report solution, not resolving an existing report error.</p></article><i>→</i><article><span>3</span><strong>Point to the right build path</strong><p>Recommend self-service reporting resources or expert design help through a Partner, Consultant, or Expert Coaching route.</p></article><i>→</i><article><span>4</span><strong>Preserve the support channel</strong><p>Explain that if the customer builds the report and hits a compilation error, GACK, or unexpected failure, Support can then investigate the defect path.</p></article>
+</div>
+<div class="case-principle">
+<span class="mini-eyebrow">IMPORTANT</span>
+<h4>Do not leave the customer with a pure refusal.</h4>
+<p>Even when Support cannot build the custom KPI directly, the response should still validate the business need, outline a plausible design direction, and route the customer to the best channel for hands-on implementation help.</p>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>04</span><div><small>CUSTOMER RESPONSE</small><h4>Set the boundary clearly, but still help the customer move forward</h4></div></div>
+<div class="case-response-layout">
+<div class="case-response-copy">
+<span class="mini-eyebrow">PRACTICAL GUIDANCE</span>
+<h4>Clarify the best channel for the build while preserving a troubleshooting path</h4>
+<ol class="case-response-steps"><li>Acknowledge that the KPI request is valid and restate the expected output: total closed Cases, Cases closed within 24 hours, and the percentage closed within 24 hours by support agent.</li><li>Explain that a likely design path is a <strong>Cases report grouped by owner</strong> plus report or field logic that flags whether a Case was closed within 24 hours.</li><li>Be transparent that Support does not build custom reports and formulas end-to-end as a consulting service. For hands-on design help, recommend a <strong>Salesforce Partner</strong>, <strong>Accredited Consultant</strong>, or, where available, <strong>Premier Success Expert Coaching</strong>.</li><li>Tell the customer that if they build the report and hit a real error — such as a formula compilation failure, an unexpected platform error, or a report feature not behaving as documented — they should reopen the case and Support can investigate that break/fix path.</li></ol>
+<div class="case-knowledge-chip"><span>◎</span><div><small>WHY THIS WORKS</small><strong>The answer creates a route forward without pretending Support will own the design work</strong><p>It validates the KPI goal, gives the customer a starting direction, identifies the right implementation channel, and keeps the door open for true troubleshooting if the build runs into a defect.</p></div></div>
+</div>
+<figure class="case-library-figure case-response-figure">
+<div class="case-image-stack">
+<img alt="Part 1 of the response explaining why building a custom Case Resolution KPI report is outside the scope of Salesforce Support and outlining recommended next steps." src="images/m10-case09-response-part1.png"/>
+<img alt="Part 2 of the response explaining how the customer can proceed, when to reopen the case, and how Support can help troubleshoot actual errors." src="images/m10-case09-response.png"/>
+</div>
+<figcaption>Complete response shown in two parts: first the support-boundary explanation, then the follow-up guidance on recommended paths and when Support should re-enter for troubleshooting.</figcaption></figure>
+</div>
+</section>
+
+<section class="case-study-section">
+<div class="case-study-heading"><span>05</span><div><small>WHY THIS RESPONSE WORKS</small><h4>It protects the support boundary without abandoning the business question</h4></div></div>
+<div class="case-response-quality">
+<article><span>✓</span><strong>Validates the KPI need</strong><p>The response shows the business request was understood instead of dismissed as out of scope.</p></article>
+<article><span>✓</span><strong>Names the right channel</strong><p>Partner, consultant, or expert-coaching guidance helps the customer find hands-on build support.</p></article>
+<article><span>✓</span><strong>Gives design orientation</strong><p>The customer still leaves with a practical direction for how the report could be structured.</p></article>
+<article><span>✓</span><strong>Preserves break/fix support</strong><p>If the customer encounters a formula error or unexpected platform failure, Support remains the right place to troubleshoot it.</p></article>
+</div>
+<div class="case-next-step"><span class="case-next-icon">→</span><div><span class="mini-eyebrow">NEXT ACTION</span><h4>Decide whether to self-build or engage design help</h4><p>If the customer has the internal reporting skill to prototype the KPI, they can start with a Cases-by-owner design. If not, a consulting or expert-coaching route is the fastest way to produce a polished solution.</p></div></div>
+</section>
+
+<div class="section-nav"><button class="section-nav-btn prev" data-go="real-cases" data-subtarget="case-omni-channel-inbox-blank">← Previous: Case 08</button><button class="section-nav-btn next" data-full-page="progress">Back to Home →</button></div>
+</article>
+
 </section>
 <footer>
 <p>Service Cloud · Interactive Training Guide</p>

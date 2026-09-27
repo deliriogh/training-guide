@@ -129,7 +129,13 @@ const subtopicLabels = {
   "escalation-readiness": "Escalation Readiness",
   "swarming": "Swarming",
   "release-readiness": "Release Readiness",
-  "final-checklist": "Final Investigation Checklist"
+  "final-checklist": "Final Investigation Checklist",
+  "case-library-guide": "Guide · Working a Case",
+  "case-web-to-case-spam": "Case 01 · Web-to-Case Spam Prevention",
+  "case-appexchange-package": "Case 02 · Third-Party AppExchange Package",
+  "case-intermittent-save": "Case 03 · Intermittent Case Save Failures",
+  "case-printable-view-knowledge": "Case 04 · Printable View Missing in Knowledge",
+  "case-api-request-consumption": "Case 05 · Daily API Request Consumption"
 };
 
 function updateBreadcrumb(parentId, subtarget = null, isUtility = false) {
@@ -457,6 +463,10 @@ function updateModuleQuizAverages() {
   const results = getQuizResults();
   document.querySelectorAll(".course-module-card[data-module]").forEach(card => {
     const moduleNumber = card.dataset.module;
+    if (moduleNumber === "10") {
+      card.querySelector(".module-quiz-stat")?.remove();
+      return;
+    }
     const topicIds = getModuleTopicIds(moduleNumber);
     const moduleResults = topicIds.map(id => results[id]).filter(result => result && Number.isFinite(result.score));
     const average = moduleResults.length
@@ -714,6 +724,11 @@ if (historyForward) {
 
 sectionNavButtons.forEach(button => {
   button.addEventListener("click", () => {
+    const fullPageTarget = button.dataset.fullPage;
+    if (fullPageTarget) {
+      showFullPage(fullPageTarget);
+      return;
+    }
     showSection(button.dataset.go, button.dataset.subtarget || null);
   });
 });
@@ -833,13 +848,19 @@ function buildModuleExperience() {
 
     const hero = document.createElement("div");
     hero.className = "module-hub-hero";
+    const modulePathLabel = sectionId === "real-cases"
+      ? "Intake · Investigate · Respond · Follow up"
+      : "Learn · Understand · Investigate · Apply · Check";
+    const moduleCountLabel = sectionId === "real-cases"
+      ? `${Math.max(topicButtons.length - 1, 0)} case${Math.max(topicButtons.length - 1, 0) === 1 ? "" : "s"} + guide`
+      : `${topicButtons.length || "Coming"} ${topicButtons.length === 1 ? "topic" : "topics"}`;
     hero.innerHTML = `
       <span class="module-hub-kicker">MODULE ${moduleNumber}</span>
       <h2>${title}</h2>
       <p>${description}</p>
       <div class="module-hub-meta">
-        <span>${topicButtons.length || "Coming"} ${topicButtons.length === 1 ? "topic" : "topics"}</span>
-        <span>Learn · Understand · Investigate · Apply · Check</span>
+        <span>${moduleCountLabel}</span>
+        <span>${modulePathLabel}</span>
       </div>
     `;
     section.prepend(hero);
@@ -1945,3 +1966,82 @@ fieldTypeCards.forEach(card => {
   card.addEventListener('focus', () => activateFieldType(card));
   card.addEventListener('click', () => activateFieldType(card));
 });
+
+// V82 — global click-to-zoom for training images.
+(function initImageLightbox(){
+  const images = [...document.querySelectorAll('main.content img')]
+    .filter(img => !img.closest('.image-lightbox') && !img.hasAttribute('data-no-zoom'));
+  if(!images.length) return;
+
+  const modal = document.createElement('div');
+  modal.className = 'image-lightbox';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-label', 'Expanded training image');
+  modal.innerHTML = `
+    <div class="image-lightbox-dialog">
+      <button class="image-lightbox-close" type="button" aria-label="Close expanded image">×</button>
+      <span class="image-lightbox-hint">Click outside or press Esc to close</span>
+      <img class="image-lightbox-image" alt="" />
+      <p class="image-lightbox-caption"></p>
+    </div>`;
+  document.body.appendChild(modal);
+
+  const modalImg = modal.querySelector('.image-lightbox-image');
+  const caption = modal.querySelector('.image-lightbox-caption');
+  const closeButton = modal.querySelector('.image-lightbox-close');
+  let previousFocus = null;
+
+  const captionFor = img => {
+    const figcaption = img.closest('figure')?.querySelector('figcaption');
+    if(figcaption?.textContent?.trim()) return figcaption.textContent.trim();
+    return (img.getAttribute('alt') || '').trim();
+  };
+
+  const open = img => {
+    previousFocus = document.activeElement;
+    modalImg.src = img.currentSrc || img.src;
+    modalImg.alt = img.alt || 'Expanded training image';
+    caption.textContent = captionFor(img);
+    modal.classList.add('open');
+    document.body.classList.add('image-lightbox-open');
+    closeButton.focus({preventScroll:true});
+  };
+
+  const close = () => {
+    if(!modal.classList.contains('open')) return;
+    modal.classList.remove('open');
+    document.body.classList.remove('image-lightbox-open');
+    modalImg.removeAttribute('src');
+    if(previousFocus && typeof previousFocus.focus === 'function') {
+      previousFocus.focus({preventScroll:true});
+    }
+  };
+
+  images.forEach(img => {
+    img.classList.add('zoomable-content-image');
+    if(!img.hasAttribute('tabindex')) img.tabIndex = 0;
+    if(!img.hasAttribute('role')) img.setAttribute('role', 'button');
+    if(!img.hasAttribute('aria-label')) {
+      img.setAttribute('aria-label', `${img.alt || 'Training image'}. Click to enlarge.`);
+    }
+    img.addEventListener('click', event => {
+      event.stopPropagation();
+      open(img);
+    });
+    img.addEventListener('keydown', event => {
+      if(event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        open(img);
+      }
+    });
+  });
+
+  closeButton.addEventListener('click', close);
+  modal.addEventListener('click', event => {
+    if(event.target === modal) close();
+  });
+  document.addEventListener('keydown', event => {
+    if(event.key === 'Escape') close();
+  });
+})();
